@@ -1,0 +1,63 @@
+import LinkedinIcon from "/src/assets/images/Icons/LinkedinIcon.png"
+import GithubIcon from "/src/assets/images/Icons/GithubIcon.png"
+import { useState, useEffect } from "react"
+
+const NavLink = [
+    { name: "Projects", link: "#projects" },
+    { name: "Skills & Tools", link: "#aboutme" },
+    { name: "Experience", link: "#experience" },
+    { name: "Contact", link: "#contact" },
+]
+
+const Navbar = () => {
+
+    const [scrolled, setScrolled] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 50)
+        }
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+  return (
+
+    <nav className={`sticky top-0 z-50 transition-all duration-300
+     ${scrolled 
+        ? "border-b border-white/10 bg-transparent backdrop-blur-md"
+        : "border-b border-transparent bg-transparent "}`}
+        >
+    <div className="py-4 px-5 md:px-6 lg:px-10">
+
+        <div className="flex flex-row justify-between">
+
+        <div className="flex flex-row items-center gap-6">
+        <h1 className="text-[#EDEFF3] text-xl font-semibold">
+            Mohammed Rayyan
+        </h1>
+        {NavLink.map((nav) => (
+        <a href={nav.link} className="text-[#CBD1D8] hover:text-[#2BD3D2] font-lightbold">
+            {nav.name}
+        </a>
+        ))}
+        </div>
+
+        <div className="flex flex-row gap-2">
+            <div className="flex items-center justify-center w-9 h-9 hover:bg-white/10 cursor-pointer rounded-lg">
+            <img src={LinkedinIcon} alt="Linkedin Icon" className="w-6 object-contain" />
+            </div>
+            <div className="flex items-center justify-center w-9 h-9 hover:bg-[#FFFFFF10] cursor-pointer rounded-lg">
+            <img src={GithubIcon} alt="Github Icon" className="w-6 object-contain" />
+            </div>
+        </div>
+
+        </div>
+
+    </div>
+    </nav>
+  )
+}
+
+export default Navbar
