@@ -1,58 +1,48 @@
-import Github from "/src/assets/images/Icons/GithubIcon.png"
-import linkedin from "/src/assets/images/Icons/LinkedinIcon.png"
 import MyPhoto from "/src/assets/images/my-photo.png"
+import Grid from "/src/assets/images/ui/Grid.png"
+import { FileText } from "lucide-react"
 
 const HeroSection = () => {
   return (
-    <div className=" px-5 md:px-6 lg:px-20">
+    <div className="relative">
 
-      <div className="flex flex-row justify-between">
+      <img src={Grid} alt="Grid" className="absolute w-full max-h-[700px] object-contain"/>
+    
+      <div className="relative flex flex-row items-center justify-between">
 
-      <div className="flex flex-col pl-[40px] gap-4">
-        <h1 className="text-[#EDEFF3] text-3xl font-bold">
-            Hi, I'm <span className="text-[#7AA2F7]">Mohammed Rayyan</span>
-        </h1>
-        <h2 className="text-[#E6E8EB] font-bold text-3xl">
-            Frontend Developer
+      <div className="flex flex-col gap-4">
+        <h2 className="text-[#E6E8EB] text-3xl">
+            Hi,
         </h2>
+        <h1 className="text-[#EDEFF3] text-5xl font-bold">
+            I'm <span className="text-[#7AA2F7]">Mohammed Rayyan</span>
+        </h1>
         <p className="text-[#CBD1D880] text-lg pt-[10px]">
-            Frontend Developer specialized in responsive web applications, <br/> 
+            a <span className="text-[#E6E8EB] font-semibold">front-end developer</span> specialized in responsive web applications, <br/> 
             component-driven development, and modern UI frameworks.
         </p>
-        <div className="flex flex-row gap-10 pt-[40px]">
+        <div className="flex flex-row gap-10 pt-[20px]">
         <button
         onClick={() => ""} 
-        className="px-[40px] py-[16px] bg-[#7AA2F7] rounded-lg hover:bg-[#6C8EDB] text-[#0F1115] font-bold">
-          View Projects
-        </button>
-        <button
-        onClick={() => ""} 
-        className="px-[35px] py-[16px] bg-[#7AA2F712] rounded-lg hover:bg-[#7AA2F722] text-[#7AA2F7] border-[1px] border-[#7AA2F745] font-bold">
+        className="px-[30px] py-[14px] bg-[#7AA2F7] rounded-lg hover:bg-[#6C8EDB] text-[#0F1115] font-bold">
           Get in Touch
         </button>
-        </div>
-        <div className="flex flex-row gap-6 pt-5">
-        <a
-        href="https://github.com/mohammedrayyan-dev"
-        target="_blank" 
-        className="max-w-[30px]">
-          <img src={Github} alt="Github Icon" className="h-full w-full object-contain"/>
-        </a>
-        <a 
-        href="https://www.linkedin.com/in/mohammedrayyan-dev" 
-        target="_blank" 
-        className="max-w-[30px]">
-          <img src={linkedin} alt="LinkedIn Icon" className="h-full w-full object-contain"/>
-        </a>
+        <button
+        onClick={() => ""} 
+        className="text-[#7AA2F7] hover:text-[#6C8EDB] flex flex-row items-center text-base font-bold">
+          <FileText className="inline mr-2" />
+          RESUME
+        </button>
         </div>
       </div>
 
       <div>
-      <img src={MyPhoto} alt="My Photo" className="w-[250px] object-contain"/>
+      <img src={MyPhoto} alt="My Photo" className="w-[350px] object-contain rounded-full"/>
       </div>
 
       </div>
-    </div>
+
+      </div>
 
   )
 }

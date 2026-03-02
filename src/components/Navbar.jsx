@@ -34,23 +34,23 @@ const Navbar = () => {
         <div className="flex flex-row justify-between">
 
         <div className="flex flex-row items-center gap-6">
-        <h1 className="text-[#EDEFF3] text-xl font-semibold">
+        <h1 className="text-[#7AA2F7] text-xl font-semibold">
             Mohammed Rayyan
         </h1>
         {NavLink.map((nav) => (
-        <a href={nav.link} className="text-[#CBD1D8] hover:text-[#2BD3D2] font-lightbold">
+        <a key={nav.name} href={nav.link} className="text-[#C9D1E3] hover:text-[#7AA2F7] font-lightbold">
             {nav.name}
         </a>
         ))}
         </div>
 
         <div className="flex flex-row gap-2">
-            <div className="flex items-center justify-center w-9 h-9 hover:bg-white/10 cursor-pointer rounded-lg">
+            <a href="https://www.linkedin.com/in/mohammedrayyan-dev" target="_blank" className="flex items-center justify-center w-9 h-9 hover:bg-white/10 cursor-pointer rounded-lg">
             <img src={LinkedinIcon} alt="Linkedin Icon" className="w-6 object-contain" />
-            </div>
-            <div className="flex items-center justify-center w-9 h-9 hover:bg-[#FFFFFF10] cursor-pointer rounded-lg">
+            </a>
+            <a href="https://github.com/mohammedrayyan-dev" target="_blank" className="flex items-center justify-center w-9 h-9 hover:bg-[#FFFFFF10] cursor-pointer rounded-lg">
             <img src={GithubIcon} alt="Github Icon" className="w-6 object-contain" />
-            </div>
+            </a>
         </div>
 
         </div>
