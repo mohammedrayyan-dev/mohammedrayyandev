@@ -3,7 +3,7 @@ import GithubIcon from "/src/assets/images/Icons/GithubIcon.png"
 
 const Footer = () => {
   return (
-    <div className="px-5 md:px-6 lg:px-40">
+    <div className="bg-gradient-to-b from-transparent to-[#141C2B] px-5 md:px-6 lg:px-40">
 
         <div className="flex flex-row justify-between">
 

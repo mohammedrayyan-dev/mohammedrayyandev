@@ -1,7 +1,11 @@
-import './App.css'
-import { Routes } from 'react-router-dom'
-import { Route } from 'react-router-dom'
-import Home from './pages/Home.jsx'
+import "./App.css"
+import { Routes } from "react-router-dom"
+import { Route } from "react-router-dom"
+import Home from "./pages/Home.jsx"
+import Projects from "./pages/Projects.jsx"
+import SkillsAndTools from "./pages/SkillsAndTools.jsx"
+import Experience from "./pages/Experience.jsx"
+import Contact from "./pages/Contact.jsx"
 import Navbar from "/src/components/Navbar.jsx"
 import Footer from "/src/components/Footer.jsx"
 
@@ -14,9 +18,10 @@ function App() {
     <Navbar/>
     <Routes>
       <Route path='/' element={<Home />} />
-      <Route path='/' element={<Home />} />
-      <Route path='/' element={<Home />} />
-      <Route path='/' element={<Home />} />
+      <Route path='/projects' element={<Projects />} />
+      <Route path='/skills-and-tools' element={<SkillsAndTools />} />
+      <Route path='/experience' element={<Experience />} />
+      <Route path='/contact' element={<Contact />} />
     </Routes>
     <Footer /> 
     </div>

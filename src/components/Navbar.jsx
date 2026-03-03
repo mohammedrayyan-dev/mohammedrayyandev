@@ -3,10 +3,10 @@ import GithubIcon from "/src/assets/images/Icons/GithubIcon.png"
 import { useState, useEffect } from "react"
 
 const NavLink = [
-    { name: "Projects", link: "#projects" },
-    { name: "Skills & Tools", link: "#aboutme" },
-    { name: "Experience", link: "#experience" },
-    { name: "Contact", link: "#contact" },
+    { name: "Projects", link: "/projects" },
+    { name: "Skills & Tools", link: "/skills-and-tools" },
+    { name: "Experience", link: "/experience" },
+    { name: "Contact", link: "/contact" },
 ]
 
 const Navbar = () => {
@@ -34,9 +34,11 @@ const Navbar = () => {
         <div className="flex flex-row justify-between">
 
         <div className="flex flex-row items-center gap-6">
-        <h1 className="text-[#7AA2F7] text-xl font-semibold">
+        <a 
+        href="/"
+        className="text-[#7AA2F7] text-xl font-semibold">
             Mohammed Rayyan
-        </h1>
+        </a>
         {NavLink.map((nav) => (
         <a key={nav.name} href={nav.link} className="text-[#C9D1E3] hover:text-[#7AA2F7] font-lightbold">
             {nav.name}

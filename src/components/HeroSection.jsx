@@ -1,5 +1,5 @@
 import MyPhoto from "/src/assets/images/my-photo.png"
-import Grid from "/src/assets/images/ui/Grid.png"
+import Grid from "/src/assets/images/ui/grid.png"
 import { FileText } from "lucide-react"
 
 const HeroSection = () => {
