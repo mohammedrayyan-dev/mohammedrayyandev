@@ -13,7 +13,7 @@ const SkillsTools = () => {
     <>
     <div className="relative bg-gradient-to-b from-[#141C2B] to-transparent pt-20 pb-40 px-5 md:px-6 lg:px-40"> 
     
-      <img src={Grid} alt="Grid" className="absolute inset-0 w-full max-h-[700px] object-contain"/>
+      <img src={Grid} alt="Grid" className="absolute inset-0 w-full object-contain [mask-image:linear-gradient(to_bottom,black,transparent)]"/>
 
     <div className="relative flex flex-col gap-10">
 

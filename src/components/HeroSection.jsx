@@ -1,12 +1,9 @@
 import MyPhoto from "/src/assets/images/my-photo.png"
-import Grid from "/src/assets/images/ui/grid.png"
 import { FileText } from "lucide-react"
 
 const HeroSection = () => {
   return (
     <div className="relative">
-
-      <img src={Grid} alt="Grid" className="absolute w-full max-h-[700px] object-contain"/>
     
       <div className="relative flex flex-row items-center justify-between">
 
