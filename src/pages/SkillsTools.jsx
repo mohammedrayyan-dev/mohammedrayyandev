@@ -5,7 +5,7 @@ const Skills= {
   "Core Web": ["HTML5", "CSS3", "Responsive Web Design", "REST APIs"],
   "Frameworks & Libraries": ["React", "Material UI", "Framer Motion"],
   "Styling": ["Tailwind CSS"],
-  "Tools": ["Git", "GitHub", "Vite", "VS Code", "Chrome DevTools", "Figma"]
+  "Tools": ["Git & GitHub", "Vite", "VS Code", "Chrome DevTools", "Figma"]
 }
 
 const SkillsTools = () => {
@@ -105,10 +105,6 @@ const SkillsTools = () => {
     </div>
 
     </div>
-
-    </div>
-
-    <div>
 
     </div>
 

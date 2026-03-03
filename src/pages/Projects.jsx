@@ -37,13 +37,13 @@ const Projects = () => {
       </p>
     </div>
 
-    <div className="flex flex-row justify-center items-center my-[10px] gap-10">
+    <div className="flex flex-row justify-center items-center py-10 gap-10">
       <img src={LuluDesktop} alt="Lulu Desktop" className="max-w-80 object-contain"/>
       <img src={LuluIpad} alt="Lulu Ipad" className="max-w-80 object-contain"/>
       <img src={LuluIphone} alt="Lulu Iphone" className="max-w-80 max-h-80 object-contain"/>
     </div>
 
-    <div className="flex flex-row mt-10 gap-4">
+    <div className="flex flex-row gap-4">
       <a
       href="https://www.lulufurniture.in/"
       target="_blank"
@@ -71,13 +71,13 @@ const Projects = () => {
       </p>
     </div>
 
-    <div className="flex flex-row justify-center items-center my-[10px] gap-10">
+    <div className="flex flex-row justify-center items-center py-10 gap-10">
       <img src={ProfinaDesktop} alt="Profina Desktop" className="max-w-80 object-contain"/>
       <img src={ProfinaIpad} alt="Profina Ipad" className="max-w-80 object-contain"/>
       <img src={ProfinaIphone} alt="Profina Iphone" className="max-w-80 max-h-80 object-contain"/>
     </div>
 
-    <div className="flex flex-row mt-10 gap-4">
+    <div className="flex flex-row gap-4">
       <a
       href="https://profina.vercel.app/"
       target="_blank"
@@ -97,10 +97,6 @@ const Projects = () => {
     </div>
 
     </div>
-
-    </div>
-
-    <div>
 
     </div>
 
