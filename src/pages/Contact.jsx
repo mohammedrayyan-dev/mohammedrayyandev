@@ -25,15 +25,17 @@ const Contact = () => {
     <div
     onClick={() => window.open("mailto:mohammedrayyandmr@gmail.com", "_blank")} 
     className="bg-[#141C2B] border border-[#2A3441] rounded-lg p-5 hover:bg-[#1B2434] cursor-pointer transition-colors duration-300">
+      <div className="flex flex-col gap-2">
       <h2 className="text-[#7AA2F7] text-3xl font-semibold">
         Email
       </h2>
-      <p className="text-[#CBD1D890] text-xl">  
+      <p className="text-[#CBD1D8] text-md">  
         mohammedrayyandmr@gmail.com
       </p> 
-      <p className="text-[#CBD1D890] text-md">  
+      <p className="text-[#CBD1D880] text-sm">  
         Click to send a message
       </p> 
+      </div>
     </div>
 
     </div>
