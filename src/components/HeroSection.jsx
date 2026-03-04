@@ -1,7 +1,11 @@
 import MyPhoto from "/src/assets/images/my-photo.png"
 import { FileText } from "lucide-react"
+import { useNavigate } from "react-router-dom"
 
 const HeroSection = () => {
+
+  const navigate = useNavigate("")
+
   return (
     <div className="relative">
     
@@ -20,16 +24,18 @@ const HeroSection = () => {
         </p>
         <div className="flex flex-row gap-10 pt-[20px]">
         <button
-        onClick={() => ""} 
+        onClick={() => navigate("/contact")}
         className="px-[30px] py-[14px] bg-[#7AA2F7] rounded-lg hover:bg-[#6C8EDB] text-[#0F1115] font-bold">
           Get in Touch
         </button>
-        <button
-        onClick={() => ""} 
-        className="text-[#7AA2F7] hover:text-[#6C8EDB] flex flex-row items-center text-base font-bold">
-          <FileText className="inline mr-2" />
-          RESUME
-        </button>
+          <a
+          href="/resume.pdf"
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-[#7AA2F7] hover:text-[#6C8EDB] flex flex-row justify-center items-center text-base font-bold">
+            <FileText className="inline mr-2" />
+            RESUME
+          </a>
         </div>
       </div>
 
