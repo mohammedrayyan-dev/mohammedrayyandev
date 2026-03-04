@@ -6,14 +6,13 @@ import Grid from "/src/assets/images/ui/grid.png"
 const Home = () => {
   return (
     <>
-    {/* <div className="relative"> */}
-      <div className="relative bg-gradient-to-b from-[#141C2B] to-transparent"> 
+    <div className="relative bg-gradient-to-b from-[#141C2B] to-transparent overflow-hidden"> 
 
-    <img src={EllipseBlur} alt="Ellipse Blur" className="absolute w-full object-contain"/>
+    <img src={EllipseBlur} alt="Ellipse Blur" className="absolute w-full object-cover"/>
 
-    <img src={Grid} alt="Grid" className="absolute w-full inset-0 object-contain [mask-image:linear-gradient(to_top,black,transparent)]"/>
+    <img src={Grid} alt="Grid" className="absolute inset-0 w-full h-full object-cover opacity-40 pointer-events-none"/>
 
-    <div className="relative pb-40 px-5 md:px-6 lg:px-40"> 
+    <div className="relative pb-40 px-5 md:px-6 lg:px-30"> 
       <HeroSection/> 
       <Workflow />
       </div>

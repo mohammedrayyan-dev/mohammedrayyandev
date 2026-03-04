@@ -35,7 +35,7 @@ const Workflow = () => {
 
   return (
     <>
-        <div className="flex flex-row gap-10 py-[150px] justify-center items-center">
+        <div className="flex flex-row gap-10 py-[150px] justify-center items-center max-w-7xl mx-auto">
 
         <div className="flex flex-col gap-4">
         <div className="flex flex-row items-center gap-4">
@@ -50,7 +50,7 @@ const Workflow = () => {
             </h2>
         </div>
         </div>
-        <p className="text-[#9CA3AF80] text-md pt-[6px] max-w-[350px] ">
+        <p className="text-[#9CA3AF80] text-md pt-[6px] max-w-xs"> 
             Understand requirements, define scope, and break problems into clear, actionable components.
         </p>
         </div>
@@ -68,7 +68,7 @@ const Workflow = () => {
             </h2>
         </div>
         </div>
-        <p className="text-[#9CA3AF80] text-md pt-[6px] max-w-[350px] ">
+        <p className="text-[#9CA3AF80] text-md pt-[6px] max-w-xs ">
             Develop clean, reusable components with a focus on performance, accessibility, and responsiveness.
         </p>
         </div>
@@ -86,14 +86,14 @@ const Workflow = () => {
             </h2>
         </div>
         </div>
-        <p className="text-[#9CA3AF80] text-md pt-[6px] max-w-[350px] ">
+        <p className="text-[#9CA3AF80] text-md pt-[6px] max-w-xs ">
             Test, iterate, and improve based on feedback—ensuring the final interface is polished and reliable.
         </p>
         </div>
 
         </div>
 
-        <div className="flex flex-row gap-20">
+        <div className="flex flex-row items-center justify-center gap-10 max-w-7xl mx-auto">
 
         <div className="flex flex-col gap-5">
         {Stratergys.map((strat, index) => ( 

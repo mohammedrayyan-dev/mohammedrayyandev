@@ -24,16 +24,16 @@ const Navbar = () => {
 
   return (
 
-    <nav className={`sticky top-0 z-50 transition-all duration-300
+    <header className={`sticky top-0 z-50 transition-all duration-300
      ${scrolled 
         ? "border-b border-white/10 bg-transparent backdrop-blur-md"
         : "border-b border-transparent bg-transparent "}`}
         >
-    <div className="py-4 px-5 md:px-6 lg:px-10">
+    <div className="py-4 px-5 md:px-6 lg:px-20 max-w-[1800px] mx-auto">
 
         <div className="flex flex-row justify-between">
 
-        <div className="flex flex-row items-center gap-6">
+        <nav className="flex flex-row items-center gap-6">
         <a 
         href="/"
         className="text-[#7AA2F7] text-xl font-semibold">
@@ -44,7 +44,7 @@ const Navbar = () => {
             {nav.name}
         </a>
         ))}
-        </div>
+        </nav>
 
         <div className="flex flex-row gap-2">
             <a href="https://www.linkedin.com/in/mohammedrayyan-dev" target="_blank" className="flex items-center justify-center w-9 h-9 hover:bg-white/10 cursor-pointer rounded-lg">
@@ -58,7 +58,7 @@ const Navbar = () => {
         </div>
 
     </div>
-    </nav>
+    </header>
   )
 }
 
