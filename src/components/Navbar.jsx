@@ -1,5 +1,6 @@
 import LinkedinIcon from "/src/assets/images/Icons/LinkedinIcon.png"
 import GithubIcon from "/src/assets/images/Icons/GithubIcon.png"
+import { Menu } from "lucide-react"
 import { useState, useEffect } from "react"
 
 const NavLink = [
@@ -36,26 +37,32 @@ const Navbar = () => {
         <nav className="flex flex-row items-center gap-6">
         <a 
         href="/"
-        className="text-[#7AA2F7] text-xl font-semibold">
+        className="text-[#7AA2F7] text-lg md:text-xl font-semibold">
             Mohammed Rayyan
         </a>
         {NavLink.map((nav) => (
-        <a key={nav.name} href={nav.link} className="text-[#C9D1E3] hover:text-[#7AA2F7] font-lightbold">
+        <a key={nav.name} href={nav.link} className="hidden md:block text-[#C9D1E3] hover:text-[#7AA2F7] font-lightbold">
             {nav.name}
         </a>
         ))}
         </nav>
 
-        <div className="flex flex-row gap-2">
-            <a href="https://www.linkedin.com/in/mohammedrayyan-dev" target="_blank" className="flex items-center justify-center w-9 h-9 hover:bg-white/10 cursor-pointer rounded-lg">
-            <img src={LinkedinIcon} alt="Linkedin Icon" className="w-6 object-contain" />
+        <div className="flex flex-row items-center gap-4">
+            <a href="https://www.linkedin.com/in/mohammedrayyan-dev" target="_blank" className="flex items-center justify-center w-4 md:w-6 cursor-pointer rounded-lg">
+            <img src={LinkedinIcon} alt="Linkedin Icon" className="w-full h-full object-contain" />
             </a>
-            <a href="https://github.com/mohammedrayyan-dev" target="_blank" className="flex items-center justify-center w-9 h-9 hover:bg-[#FFFFFF10] cursor-pointer rounded-lg">
-            <img src={GithubIcon} alt="Github Icon" className="w-6 object-contain" />
+            <a href="https://github.com/mohammedrayyan-dev" target="_blank" className="flex items-center justify-center w-4 md:w-6 cursor-pointer rounded-lg">
+            <img src={GithubIcon} alt="Github Icon" className="w-full h-full object-contain" />
             </a>
+            {/* Hamburger Menu */}
+            <div className="block md:hidden">
+                <Menu className="text-gray-400"/>
+            </div>
         </div>
 
         </div>
+
+        
 
     </div>
     </header>

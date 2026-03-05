@@ -6,10 +6,10 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto">
 
         <div className="flex flex-col gap-4 pb-[20px]">
-            <h1 className="text-[#CBD1D880] text-sm">
+            <h1 className="text-[#CBD1D880] text-xs md:text-sm">
                 About Me
             </h1>
-            <p className="text-[#E6E8EB90] text-md">
+            <p className="text-[#E6E8EB90] text-xs md:text-md">
                 I'm Rayyan, a <span className="text-[#E6E8EB]">front-end developer</span> who loves intuitive, <br/>
                 clean and modern UI design.
             </p>
@@ -17,7 +17,7 @@ const Footer = () => {
 
         <div className="border-t border-[#E6E8EB20] pb-4" />
 
-            <p className="text-[#E6E8EB20] text-right text-sm pb-6">
+            <p className="text-[#E6E8EB20] text-right text-xs md:text-sm pb-6">
                 © 2026, Mohammed Rayyan
             </p>
 
