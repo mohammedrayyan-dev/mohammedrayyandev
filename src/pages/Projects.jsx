@@ -19,20 +19,20 @@ const Projects = () => {
       <h1 className="text-3xl md:text-6xl font-bold text-white">
         Projects
       </h1>
-      <p className="text-[#CBD1D880] text-sm md:text-lg text-justify">
+      <p className="text-[#CBD1D880] text-sm md:text-lg text-left">
         Here are some of the projects I have worked on.
       </p>
     </div>
 
-    <div className="border-l border-[#CBD1D820] mr-10 flex flex-col gap-10">
+    <div className="border-l border-[#CBD1D820] mr-5 md:mr-10 flex flex-col gap-10">
 
     <div className="pl-10 md:pl-20"> 
 
     <div className="flex flex-col gap-2">
-      <h1 className="text-[#7AA2F7] text-lg md:text-xl font-semibold">
+      <h2 className="text-[#7AA2F7] text-lg md:text-xl font-semibold">
         Lulu Furniture
-      </h1>
-      <p className="text-[#CBD1D880] text-sm md:text-md text-justify">
+      </h2>
+      <p className="text-[#CBD1D880] text-sm md:text-md text-left">
         Production-ready React website for a real furniture business with responsive UI, reusable components, and performance optimizations.
       </p>
     </div>
@@ -63,10 +63,10 @@ const Projects = () => {
     <div className="border-b border-[#CBD1D820] my-10"/>
 
     <div className="flex flex-col gap-2">
-      <h1 className="text-[#7AA2F7] text-lg md:text-xl font-semibold">
+      <h3 className="text-[#7AA2F7] text-lg md:text-xl font-semibold">
         Profina
-      </h1>
-      <p className="text-[#CBD1D880] text-sm md:text-md text-justify">
+      </h3>
+      <p className="text-[#CBD1D880] text-sm md:text-md text-left">
         A digital profile management platform that allows users to view, edit, and manage their personal or professional profiles in a modern and intuitive way. It centralizes user data such as profile information, contact details, and making it easy to maintain an up-to-date digital identity.
       </p>
     </div>

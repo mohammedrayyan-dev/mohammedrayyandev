@@ -50,7 +50,7 @@ const Workflow = () => {
             </h2>
         </div>
         </div>
-        <p className="text-[#9CA3AF80] text-sm md:text-base pt-[6px] max-w-xs text-justify"> 
+        <p className="text-[#9CA3AF80] text-sm md:text-base pt-[6px] max-w-xs text-left"> 
             Understand requirements, define scope, and break problems into clear, actionable components.
         </p>
         </div>
@@ -68,7 +68,7 @@ const Workflow = () => {
             </h2>
         </div>
         </div>
-        <p className="text-[#9CA3AF80] text-sm md:text-base pt-[6px] max-w-xs text-justify"> 
+        <p className="text-[#9CA3AF80] text-sm md:text-base pt-[6px] max-w-xs text-left"> 
             Develop clean, reusable components with a focus on performance, accessibility, and responsiveness.
         </p>
         </div>
@@ -86,7 +86,7 @@ const Workflow = () => {
             </h2>
         </div>
         </div>
-        <p className="text-[#9CA3AF80] text-sm md:text-base pt-[6px] max-w-xs text-justify"> 
+        <p className="text-[#9CA3AF80] text-sm md:text-base pt-[6px] max-w-xs text-left"> 
             Test, iterate, and improve based on feedback—ensuring the final interface is polished and reliable.
         </p>
         </div>

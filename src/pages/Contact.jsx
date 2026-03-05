@@ -13,12 +13,12 @@ const Contact = () => {
       <h1 className="text-3xl md:text-6xl font-bold text-white">
         Contact
       </h1>
-      <p className="text-[#CBD1D880] text-sm md:text-md text-justify">
+      <p className="text-[#CBD1D880] text-sm md:text-md text-left">
         Feel free to reach out for opportunities, collaborations, or project discussions.
       </p>
     </div>
 
-    <div className="border-l border-[#CBD1D820] mr-10 flex flex-col gap-10">
+    <div className="border-l border-[#CBD1D820] mr-5 md:mr-10 flex flex-col gap-10">
 
     <div className="pl-10 md:pl-20"> 
 

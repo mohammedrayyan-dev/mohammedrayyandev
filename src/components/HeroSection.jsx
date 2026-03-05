@@ -18,7 +18,7 @@ const HeroSection = () => {
         <h1 className="text-[#EDEFF3] text-2xl md:text-5xl font-bold">
             I'm <span className="text-[#7AA2F7]">Mohammed Rayyan</span>
         </h1>
-        <p className="text-[#CBD1D880] text-sm md:text-lg pt-[10px] text-justify max-w-xl">
+        <p className="text-[#CBD1D880] text-sm md:text-lg pt-[10px] text-left max-w-xl">
             a <span className="text-[#E6E8EB] font-semibold">front-end developer</span> specialized in responsive web applications, component-driven development, and modern UI frameworks.
         </p>
         <div className="flex flex-row gap-5 md:gap-10 pt-[20px]">
