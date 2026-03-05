@@ -37,7 +37,7 @@ const Projects = () => {
       </p>
     </div>
 
-    <div className="flex flex-col md:flex-row justify-center items-center py-10 gap-10">
+    <div className="flex flex-col lg:flex-row justify-center items-center py-10 gap-10">
       <img src={LuluDesktop} alt="Lulu Desktop" className="max-w-40 md:max-w-80 object-contain"/>
       <img src={LuluIpad} alt="Lulu Ipad" className="max-w-40 md:max-w-80 object-contain"/>
       <img src={LuluIphone} alt="Lulu Iphone" className="max-w-40 md:max-w-80 max-h-40 md:max-h-80 object-contain"/>
@@ -71,7 +71,7 @@ const Projects = () => {
       </p>
     </div>
 
-    <div className="flex flex-col md:flex-row justify-center items-center py-10 gap-10">
+    <div className="flex flex-col lg:flex-row justify-center items-center py-10 gap-10">
       <img src={ProfinaDesktop} alt="Profina Desktop" className="max-w-40 md:max-w-80 object-contain"/>
       <img src={ProfinaIpad} alt="Profina Ipad" className="max-w-40 md:max-w-80 object-contain"/>
       <img src={ProfinaIphone} alt="Profina Iphone" className="max-w-40 md:max-w-80 max-h-40 md:max-h-80 object-contain"/>

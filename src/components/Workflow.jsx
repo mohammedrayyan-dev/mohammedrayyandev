@@ -93,7 +93,7 @@ const Workflow = () => {
 
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-7xl mx-auto">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-10 max-w-7xl mx-auto">
 
         <div className="flex flex-col gap-5">
         {Stratergys.map((strat, index) => ( 
