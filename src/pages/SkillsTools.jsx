@@ -21,7 +21,7 @@ const SkillsTools = () => {
       <h1 className="text-3xl md:text-6xl font-bold text-white">
         Skills & Tools
       </h1>
-      <p className="text-[#CBD1D880] text-sm md:text-lg text-justify">
+      <p className="text-[#CBD1D880] text-sm md:text-base">
         A look at all the programming languages, libraries, and tools I've worked with
       </p>
     </div>
@@ -31,7 +31,7 @@ const SkillsTools = () => {
     <div className="pl-10 md:pl-20"> 
 
     <div className="flex flex-col gap-4">
-      <p className="text-[#CBD1D880] text-sm md:text-md text-justify">
+      <p className="text-[#CBD1D880] text-sm md:text-base">
       A front-end developer who enjoys turning ideas into clean, responsive web experiences. My journey into development started with curiosity about how modern websites work, and it quickly grew into a passion for building interfaces that feel smooth, intuitive, and visually polished.
       </p>
 
@@ -40,37 +40,37 @@ const SkillsTools = () => {
       <h2 className="text-[#7AA2F7] text-lg md:text-3xl font-semibold">
         Front-End Developer
       </h2>
-      <p className="text-[#CBD1D880] text-sm md:text-md text-justify">
+      <p className="text-[#CBD1D880] text-sm md:text-base">
         Production-ready React website for a real furniture business with responsive UI, reusable components, and performance optimizations.
       </p>
       <h3 className="text-[#CBD1D8] text-lg md:text-xl font-semibold">
         React
       </h3>
-      <p className="text-[#CBD1D880] text-sm md:text-md text-justify">
+      <p className="text-[#CBD1D880] text-sm md:text-base">
         Most of the interfaces I build today revolve around React. I enjoy creating component-driven applications where pieces of the UI can be reused, scaled, and maintained easily. From simple landing pages to more structured layouts, React has become my go-to tool for building responsive web applications.
       </p>
       <h3 className="text-[#CBD1D8] text-lg md:text-xl font-semibold">
         JavaScript
       </h3>
-      <p className="text-[#CBD1D880] text-sm md:text-md text-left">
+      <p className="text-[#CBD1D880] text-sm md:text-base">
         Behind every interactive feature I build, JavaScript plays its role. I use it whenever logic, dynamic behavior, or state handling is required. Whether it’s handling events, managing application state, or controlling UI behavior, JavaScript is the core language that powers the projects I work on.
       </p>
       <h3 className="text-[#CBD1D8] text-lg md:text-xl font-semibold">
         Tailwind CSS
       </h3>
-      <p className="text-[#CBD1D880] text-sm md:text-md text-left">
+      <p className="text-[#CBD1D880] text-sm md:text-base">
         For styling, Tailwind CSS is the framework I rely on the most. It allows me to rapidly build responsive layouts while keeping designs consistent and clean. I prefer Tailwind because it lets me focus on structure and user experience without spending unnecessary time writing custom CSS.
       </p>
       <h3 className="text-[#CBD1D8] text-lg md:text-xl font-semibold">
         Material UI
       </h3>
-      <p className="text-[#CBD1D880] text-sm md:text-md text-justify">
+      <p className="text-[#CBD1D880] text-sm md:text-base">
         Occasionally, when a project benefits from ready-made components, I work with Material UI. It provides a solid set of UI components that help speed up development when a more structured design system is required.
       </p>
       <h3 className="text-[#CBD1D8] text-lg md:text-xl font-semibold">
         Framer Motion
       </h3>
-      <p className="text-[#CBD1D880] text-sm md:text-md text-justify">
+      <p className="text-[#CBD1D880] text-sm md:text-base">
         Recently, I’ve started integrating Framer Motion to bring subtle animations into my interfaces. Smooth transitions and micro-interactions can significantly improve user experience, and I enjoy experimenting with motion to make interfaces feel more alive.
       </p>
     </div>

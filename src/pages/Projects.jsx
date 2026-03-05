@@ -32,7 +32,7 @@ const Projects = () => {
       <h2 className="text-[#7AA2F7] text-lg md:text-xl font-semibold">
         Lulu Furniture
       </h2>
-      <p className="text-[#CBD1D880] text-sm md:text-md text-left">
+      <p className="text-[#CBD1D880] text-sm md:text-base">
         Production-ready React website for a real furniture business with responsive UI, reusable components, and performance optimizations.
       </p>
     </div>
@@ -66,7 +66,7 @@ const Projects = () => {
       <h3 className="text-[#7AA2F7] text-lg md:text-xl font-semibold">
         Profina
       </h3>
-      <p className="text-[#CBD1D880] text-sm md:text-md text-left">
+      <p className="text-[#CBD1D880] text-sm md:text-base">
         A digital profile management platform that allows users to view, edit, and manage their personal or professional profiles in a modern and intuitive way. It centralizes user data such as profile information, contact details, and making it easy to maintain an up-to-date digital identity.
       </p>
     </div>
