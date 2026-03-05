@@ -1,10 +1,10 @@
 import Grid from "../assets/images/ui/grid.png"
-import LuluDesktop from "/src/assets/images/devices/lulu-desktop.webp"
-import LuluIpad from "/src/assets/images/devices/lulu-ipad.webp"
-import LuluIphone from "/src/assets/images/devices/lulu-iphone.webp"
-import ProfinaDesktop from "/src/assets/images/devices/profina-desktop.webp"
-import ProfinaIpad from "/src/assets/images/devices/profina-ipad.webp"
-import ProfinaIphone from "/src/assets/images/devices/profina-iphone.webp"
+import LuluDesktop from "../assets/images/devices/lulu-desktop.webp"
+import LuluIpad from "../assets/images/devices/lulu-ipad.webp"
+import LuluIphone from "../assets/images/devices/lulu-iphone.webp"
+import ProfinaDesktop from "../assets/images/devices/profina-desktop.webp"
+import ProfinaIpad from "../assets/images/devices/profina-ipad.webp"
+import ProfinaIphone from "../assets/images/devices/profina-iphone.webp"
 
 const Projects = () => {
   return (

@@ -1,4 +1,4 @@
-import MyPhoto from "/src/assets/images/my-photo.png"
+import MyPhoto from "../assets/images/my-photo.png"
 import { FileText } from "lucide-react"
 import { useNavigate } from "react-router-dom"
 

@@ -1,5 +1,5 @@
-import LinkedinIcon from "/src/assets/images/Icons/LinkedinIcon.png"
-import GithubIcon from "/src/assets/images/Icons/GithubIcon.png"
+import LinkedinIcon from "../assets/images/Icons/LinkedinIcon.png"
+import GithubIcon from "../assets/images/Icons/GithubIcon.png"
 import { Menu } from "lucide-react"
 import { useState, useEffect } from "react"
 
