@@ -1,4 +1,4 @@
-import Grid from "/src/assets/images/ui/grid.png"
+import Grid from "../assets/images/ui/grid.png"
 
 const Skills= {
   "Programming Languages": ["JavaScript", "TypeScript"],

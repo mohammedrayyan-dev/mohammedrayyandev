@@ -1,7 +1,7 @@
 import HeroSection from "../components/HeroSection.jsx"
 import EllipseBlur from "/src/assets/images/EllipseBlur.svg"
 import Workflow from "/src/components/Workflow.jsx"
-import Grid from "/src/assets/images/ui/grid.png"
+import Grid from "../assets/images/ui/grid.png"
 
 const Home = () => {
   return (

@@ -1,4 +1,4 @@
-import Grid from "/src/assets/images/ui/grid.png"
+import Grid from "../assets/images/ui/grid.png"
 import LuluDesktop from "/src/assets/images/devices/lulu-desktop.webp"
 import LuluIpad from "/src/assets/images/devices/lulu-ipad.webp"
 import LuluIphone from "/src/assets/images/devices/lulu-iphone.webp"
