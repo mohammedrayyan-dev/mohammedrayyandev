@@ -24,7 +24,7 @@ const HeroSection = () => {
         <div className="flex flex-row gap-5 md:gap-10 pt-[20px]">
         <button
         onClick={() => navigate("/contact")}
-        className="px-[15px] md:px-[30px] py-[7px] md:py-[14px] bg-[#7AA2F7] rounded-lg hover:bg-[#6C8EDB] text-[#0F1115] text-sm md:text-base font-bold">
+        className="px-[15px] md:px-[30px] py-[10px] md:py-[14px] bg-[#7AA2F7] rounded-lg hover:bg-[#6C8EDB] text-[#0F1115] text-sm md:text-base font-bold">
           Get in Touch
         </button>
           <a
@@ -39,7 +39,7 @@ const HeroSection = () => {
       </div>
 
       <div className="block">
-      <img src={MyPhoto} alt="My Photo" className="w-[125px] md:w-[350px] object-contain rounded-full"/>
+      <img src={MyPhoto} alt="My Photo" className="w-[180px] md:w-[350px] object-contain rounded-full"/>
       </div>
 
       </div>
