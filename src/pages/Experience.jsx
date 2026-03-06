@@ -30,7 +30,7 @@ const Experience = () => {
         Dec 2025 - Present
       </p>
       <p className="text-[#CBD1D8] text-lg md:text-xl">
-        Klyro Webcraft
+        Klyros Craft
       </p>
       <p className="text-[#CBD1D880] text-sm md:text-base">
         Frontend Developer delivering responsive, production-ready web interfaces for client projects. Experienced in building clean, reusable component-based applications using React and modern frontend tooling. Focused on translating UI designs into performant, responsive user interfaces that provide a consistent experience across devices.

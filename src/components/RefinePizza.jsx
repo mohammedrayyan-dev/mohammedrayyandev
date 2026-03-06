@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Pizza, Clock, CheckCircle } from "lucide-react"
+import { Pizza, Clock, CheckCircle, Store } from "lucide-react"
 
 const RefinePizza = () => {
 
@@ -14,10 +14,13 @@ const RefinePizza = () => {
                 <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#414141]" />
                 <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#65C466]" />
                 </div>
-                <div className="p-6 flex flex-col gap-4">
+                <div className="p-6 flex flex-col items-center gap-4">
+                    <div className="flex flex-row  items-center gap-3">
+                    <Store className="text-[#E31B23]" />
                     <h2 className="text-md md:text-xl text-center text-white font-semibold">
                         MoRa's Pizza Restaurent
                     </h2>
+                    </div>
                     <div className="flex flex-row items-center justify-center gap-6 transition-all duration-300 ease-out">
                     <Pizza className="text-[#F97316] shadow-lg" />
                     <button 
