@@ -1,7 +1,8 @@
 import LinkedinIcon from "../assets/images/Icons/LinkedinIcon.png"
 import GithubIcon from "../assets/images/Icons/GithubIcon.png"
-import { Menu } from "lucide-react"
+import { X, Menu } from "lucide-react"
 import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 
 const NavLink = [
     { name: "Projects", link: "/projects" },
@@ -28,7 +29,7 @@ const Navbar = () => {
   return (
 
     <header className={`sticky top-0 z-50 transition-all duration-300
-     ${scrolled
+     ${scrolled || menuOpen
         ? "border-b border-white/10 bg-transparent backdrop-blur-md"
         : "border-b border-transparent bg-transparent "}`}
         >
@@ -37,15 +38,18 @@ const Navbar = () => {
         <div className="flex flex-row justify-between">
 
         <nav className="flex flex-row items-center gap-6">
-        <a 
-        href="/"
+        <Link
+        to="/"
         className="text-[#7AA2F7] text-lg md:text-xl font-semibold">
             Mohammed Rayyan
-        </a>
+        </Link>
         {NavLink.map((nav) => (
-        <a key={nav.name} href={nav.link} className="hidden md:block text-[#C9D1E3] hover:text-[#7AA2F7] font-lightbold">
+        <Link 
+        key={nav.name} 
+        to={nav.link} 
+        className="hidden md:block text-[#C9D1E3] hover:text-[#7AA2F7] font-lightbold">
             {nav.name}
-        </a>
+        </Link>
         ))}
         </nav>
 
@@ -62,7 +66,10 @@ const Navbar = () => {
                 <button
                 className="flex"
                 onClick={() => setMenuOpen(!menuOpen)}>
-                <Menu className="text-gray-400 w-5 h-5"/>
+                {menuOpen ? 
+                <X className="text-gray-400 w-5 h-5"/>
+                : <Menu className="text-gray-400 w-5 h-5"/>
+                }
                 </button>
             </div>
 
@@ -71,11 +78,14 @@ const Navbar = () => {
         </div>
 
         {menuOpen && (
-        <div className="absolute md:hidden flex flex-col items-center gap-2 top-16 right-2 bg-[#black90] border border-white/10 text-[#C9D1E3] text-sm p-3 backdrop-blur-md rounded-xl">
-            <a href="/projects">Projects</a>
-            <a href="/skills-&-tools">Skills & Tools</a>
-            <a href="/experience">Experience</a>
-            <a href="/contact">Contact</a>
+        <div className="absolute md:hidden flex flex-col items-center gap-2 top-16 right-2 bg-[#0F1115]/80 border border-white/10 text-[#C9D1E3] text-sm p-3 rounded-xl">
+            {NavLink.map((n) => (
+            <Link 
+            to={n.link}
+            onClick={() => setMenuOpen(false)}>
+                {n.name}
+            </Link>
+            ))}
         </div>
         )}
         
