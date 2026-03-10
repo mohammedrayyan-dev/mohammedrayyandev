@@ -6,6 +6,7 @@ import { useState } from "react"
 import PlanPizza from "./PlanPizza"
 import BuildPizza from "./BuildPizza"
 import RefinePizza from "./RefinePizza"
+import { motion } from "framer-motion"
 
 const Stratergys = [
     {
@@ -35,7 +36,11 @@ const Workflow = () => {
 
   return (
     <>
-        <div className="flex flex-col md:flex-row gap-10 py-[80px] md:py-[150px] justify-center items-center max-w-7xl mx-auto">
+        <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }} 
+        className="flex flex-col md:flex-row gap-10 py-[80px] md:py-[150px] justify-center items-center max-w-7xl mx-auto">
 
         <div className="flex flex-col items-start gap-4">
         <div className="flex flex-row items-center gap-4">
@@ -91,7 +96,7 @@ const Workflow = () => {
         </p>
         </div>
 
-        </div>
+        </motion.div>
 
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 max-w-7xl mx-auto">
 

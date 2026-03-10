@@ -1,6 +1,7 @@
 import MyPhoto from "../assets/images/my-photo.png"
 import { FileText } from "lucide-react"
 import { useNavigate } from "react-router-dom"
+import { motion } from "framer-motion"
 
 const HeroSection = () => {
 
@@ -11,7 +12,11 @@ const HeroSection = () => {
     
       <div className="relative flex flex-col md:flex-row items-center justify-around">
 
-      <div className="flex flex-col gap-2 md:gap-4 pt-10 md:pt-0">
+      <motion.div 
+      initial={{ opacity: 0, x: -40 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+      className="flex flex-col gap-2 md:gap-4 pt-10 md:pt-0">
         <h2 className="text-[#E6E8EB] text-xl md:text-3xl">
             Hi,
         </h2>
@@ -36,7 +41,7 @@ const HeroSection = () => {
             RESUME
           </a>
         </div>
-      </div>
+      </motion.div>
 
       <div className="block">
       <img src={MyPhoto} alt="My Photo" className="w-[180px] md:w-[350px] object-contain rounded-full"/>

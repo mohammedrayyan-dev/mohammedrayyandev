@@ -1,4 +1,5 @@
 import Grid from "../assets/images/ui/grid.png"
+import { motion } from "framer-motion"
 
 const Experience = () => {
   return (
@@ -9,18 +10,24 @@ const Experience = () => {
 
     <div className="relative flex flex-col gap-10 max-w-6xl mx-auto">
 
-    <div className="flex flex-col gap-4">
+    <motion.div 
+    initial={{ opacity: 0, x: -30 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.5 }}
+    className="flex flex-col gap-4">
       <h1 className="text-3xl md:text-6xl font-bold text-white">
         Experience
       </h1>
       <p className="text-[#CBD1D880] text-sm md:text-lg text-left">
         All about my freelance and professional work experience.
       </p>
-    </div>
+    </motion.div>
 
-    <div className="border-l border-[#CBD1D820] mr-5 md:mr-10 flex flex-col gap-10">
-
-    <div className="pl-10 md:pl-20"> 
+    <motion.div 
+    initial={{ opacity: 0, y: -30 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    className="border-l border-[#CBD1D820] pl-10 md:pl-20"> 
 
     <div className="flex flex-col gap-4">
       <h2 className="text-[#7AA2F7] text-lg md:text-3xl font-semibold">
@@ -100,9 +107,7 @@ const Experience = () => {
       </p>
     </div>
 
-    </div>
-
-    </div>
+    </motion.div>
 
     </div>
 
