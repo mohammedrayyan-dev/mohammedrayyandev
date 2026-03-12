@@ -106,7 +106,7 @@ const Workflow = () => {
         <button
         key={strat.index}
         onClick={() => setActive(strat.index)}
-        className={`w-[330px] md:w-[550px] flex flex-row items-center justify-start px-10 py-3 gap-6 rounded-2xl transition-all duration-300
+        className={`w-[330px] md:w-[550px] flex flex-row items-center justify-start px-10 py-3 gap-6 rounded-2xl hover: hover:bg-[#5a7abd80] transition-all duration-300
         ${active === index ? "bg-[#4a66a360] border border-[#7AA2F7]"
             : "bg-[#5a7abd60] border border-white/30"}`}>
             <h2 className={`text-md md:text-xl text-left font-semibold

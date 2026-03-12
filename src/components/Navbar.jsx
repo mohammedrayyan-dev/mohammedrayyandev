@@ -5,6 +5,7 @@ import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 
 const NavLink = [
+    { name: "Home", link: "/" },
     { name: "Projects", link: "/projects" },
     { name: "Skills & Tools", link: "/skills-&-tools" },
     { name: "Experience", link: "/experience" },
@@ -47,7 +48,7 @@ const Navbar = () => {
         <Link 
         key={nav.name} 
         to={nav.link} 
-        className="hidden md:block text-[#C9D1E3] hover:text-[#7AA2F7] font-lightbold">
+        className="hidden md:block text-[#C9D1E3] hover:text-[#7AA2F7] font-lightbold transition-all duration-300">
             {nav.name}
         </Link>
         ))}

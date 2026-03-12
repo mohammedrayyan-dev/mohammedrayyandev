@@ -29,14 +29,14 @@ const HeroSection = () => {
         <div className="flex flex-row gap-5 md:gap-10 pt-[20px]">
         <button
         onClick={() => navigate("/contact")}
-        className="px-[15px] md:px-[30px] py-[10px] md:py-[14px] bg-[#7AA2F7] rounded-lg hover:bg-[#6C8EDB] text-[#0F1115] text-sm md:text-base font-bold">
+        className="px-[15px] md:px-[30px] py-[10px] md:py-[14px] bg-[#7AA2F7] rounded-lg hover:bg-[#6C8EDB] text-[#0F1115] text-sm md:text-base font-bold transition-all duration-300">
           Get in Touch
         </button>
           <a
           href="/resume.pdf"
           target="_blank" 
           rel="noopener noreferrer"
-          className="text-sm md:text-base font-bold text-[#7AA2F7] hover:text-[#6C8EDB] flex flex-row justify-center items-center">
+          className="text-sm md:text-base font-bold text-[#7AA2F7] hover:text-[#6C8EDB] flex flex-row justify-center items-center transition-all duration-300r">
             <FileText className="inline mr-2 w-4 md:w-6" />
             RESUME
           </a>

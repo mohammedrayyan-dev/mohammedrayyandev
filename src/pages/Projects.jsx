@@ -55,14 +55,14 @@ const Projects = () => {
       href="https://www.lulufurniture.in/"
       target="_blank"
       rel="noopener noreferrer"
-      className="text-sm md:text-md text-[#E6EDF7] hover:text-[#7AA2F7] hover:underline underline-offset-4">
+      className="text-sm md:text-md text-[#E6EDF7] hover:text-[#7AA2F7] hover:underline underline-offset-4 transition-all duration-300">
         View Project
       </a>
       <a
       href="https://github.com/mohammedrayyan-dev/Lulu-Furniture.git"
       target="_blank"
       rel="noopener noreferrer"
-      className="text-sm md:text-md text-[#E6EDF7] hover:text-[#7AA2F7] hover:underline underline-offset-4">
+      className="text-sm md:text-md text-[#E6EDF7] hover:text-[#7AA2F7] hover:underline underline-offset-4 transition-all duration-300">
         View Code
       </a>
     </div>
@@ -89,14 +89,14 @@ const Projects = () => {
       href="https://profina.vercel.app/"
       target="_blank"
       rel="noopener noreferrer"
-      className="text-sm md:text-md text-[#E6EDF7] hover:text-[#7AA2F7] hover:underline underline-offset-4">
+      className="text-sm md:text-md text-[#E6EDF7] hover:text-[#7AA2F7] hover:underline underline-offset-4 transition-all duration-300">
         View Project
       </a>
       <a
       href="https://github.com/mohammedrayyan-dev/Profina.git"
       target="_blank"
       rel="noopener noreferrer"
-      className="text-sm md:text-md text-[#E6EDF7] hover:text-[#7AA2F7] hover:underline underline-offset-4">
+      className="text-sm md:text-md text-[#E6EDF7] hover:text-[#7AA2F7] hover:underline underline-offset-4 transition-all duration-300">
         View Code
       </a>
     </div>
