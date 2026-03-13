@@ -14,25 +14,25 @@ const BuildPizza = () => {
             <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#65C466]" />
             </div>
             <div className="p-6 flex flex-col gap-4">
-                <h2 className="text-md md:text-xl text-white">
+                <h2 className="text-md md:text-lg lg:text-xl text-white">
                     MoRa's Pizza Restaurent
                 </h2>
                 <div className="flex flex-row items-center gap-6">
                 <Pizza className="text-[#F97316] shadow-lg" />
                 <button 
                 onClick={() => setMessage("Order received! \n ETA: 15 minutes")}
-                className="w-[140px] md:w-[200px] text-sm md:text-base px-4 py-2 bg-blue-500 hover:bg-blue-600 text-black font-semibold rounded-xl shadow-lg border border-blue-500">
+                className="w-[140px] md:w-[200px] text-sm lg:text-base px-4 py-2 bg-blue-500 hover:bg-blue-600 text-black font-semibold rounded-xl shadow-lg border border-blue-500">
                     Order Pizza
                 </button>
                 </div>
                 {message &&
                 <div>
-                    <p className="text-sm md:text-base text-white whitespace-pre-line">
+                    <p className="text-sm lg:text-base text-white whitespace-pre-line">
                         {message}
                     </p>
                     <button 
                     onClick={() => setMessage("")}
-                    className="w-[80px] md:w-[100px] px-3 md:px-4 py-2 mt-[10px] bg-[#374151] hover:bg-[#4B5563] text-sm md:text-base text-black font-semibold rounded">
+                    className="w-[80px] md:w-[100px] px-3 md:px-4 py-2 mt-[10px] bg-[#374151] hover:bg-[#4B5563] text-sm lg:text-base text-black font-semibold rounded">
                         OK
                     </button>
                     </div>

@@ -17,7 +17,7 @@ const Footer = () => {
 
         <div className="border-t border-[#E6E8EB20] pb-4" />
 
-            <p className="text-[#E6E8EB20] text-right text-xs md:text-sm pb-6">
+            <p className="text-[#E6E8EB20] text-right text-xs lg:text-sm pb-6">
                 © 2026, Mohammed Rayyan
             </p>
 

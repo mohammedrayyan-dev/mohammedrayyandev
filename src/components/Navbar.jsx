@@ -4,7 +4,14 @@ import { X, Menu } from "lucide-react"
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 
-const NavLink = [
+const NavLinksDesktop = [
+    { name: "Projects", link: "/projects" },
+    { name: "Skills & Tools", link: "/skills-&-tools" },
+    { name: "Experience", link: "/experience" },
+    { name: "Contact", link: "/contact" },
+]
+
+const NavLinksMobile = [
     { name: "Home", link: "/" },
     { name: "Projects", link: "/projects" },
     { name: "Skills & Tools", link: "/skills-&-tools" },
@@ -41,24 +48,24 @@ const Navbar = () => {
         <nav className="flex flex-row items-center gap-6">
         <Link
         to="/"
-        className="text-[#7AA2F7] text-lg md:text-xl font-semibold">
+        className="text-[#7AA2F7] text-lg lg:text-xl font-semibold">
             Mohammed Rayyan
         </Link>
-        {NavLink.map((nav) => (
+        {NavLinksDesktop.map((nav) => (
         <Link 
         key={nav.name} 
         to={nav.link} 
-        className="hidden md:block text-[#C9D1E3] hover:text-[#7AA2F7] font-lightbold transition-all duration-300">
+        className="hidden md:block text-[#C9D1E3] hover:text-[#7AA2F7] md:text-sm lg:text-base font-lightbold transition-all duration-300">
             {nav.name}
         </Link>
         ))}
         </nav>
 
         <div className="flex flex-row items-center gap-4">
-            <a href="https://www.linkedin.com/in/mohammedrayyan-dev" target="_blank" className="flex items-center justify-center w-4 md:w-6 cursor-pointer rounded-lg">
+            <a href="https://www.linkedin.com/in/mohammedrayyan-dev" target="_blank" className="flex items-center justify-center w-4 md:w-5 lg:w-6 cursor-pointer rounded-lg">
             <img src={LinkedinIcon} alt="Linkedin Icon" className="w-full h-full object-contain" />
             </a>
-            <a href="https://github.com/mohammedrayyan-dev" target="_blank" className="flex items-center justify-center w-4 md:w-6 cursor-pointer rounded-lg">
+            <a href="https://github.com/mohammedrayyan-dev" target="_blank" className="flex items-center justify-center w-4 md:w-5 lg:w-6 cursor-pointer rounded-lg">
             <img src={GithubIcon} alt="Github Icon" className="w-full h-full object-contain" />
             </a>
 
@@ -80,7 +87,7 @@ const Navbar = () => {
 
         {menuOpen && (
         <div className="absolute md:hidden flex flex-col items-center gap-2 top-16 right-2 bg-[#0F1115]/80 border border-white/10 text-[#C9D1E3] text-sm p-3 rounded-xl">
-            {NavLink.map((n) => (
+            {NavLinksMobile.map((n) => (
             <Link 
             to={n.link}
             onClick={() => setMenuOpen(false)}>

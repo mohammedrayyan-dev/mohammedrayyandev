@@ -13,12 +13,12 @@ const PlanPizza = () => {
             <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#65C466]" />
             </div>
             <div className="p-6">
-                <h2 className="text-md md:text-xl text-white">
+                <h2 className="text-md md:text-lg lg:text-xl text-white">
                     MoRa's Pizza Restaurent
                 </h2>
                 <button 
                 onClick={() => setMessage("Order received!")}
-                className="px-3 md:px-4 py-2 border text-sm md:text-base text-white">
+                className="px-3 md:px-4 py-2 border text-sm lg:text-base text-white">
                     Order Pizza
                 </button>
                 {message &&
