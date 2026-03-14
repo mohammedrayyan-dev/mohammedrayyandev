@@ -5,6 +5,7 @@ import LuluIphone from "../assets/images/devices/lulu-iphone.webp"
 import ProfinaDesktop from "../assets/images/devices/profina-desktop.webp"
 import ProfinaIpad from "../assets/images/devices/profina-ipad.webp"
 import ProfinaIphone from "../assets/images/devices/profina-iphone.webp"
+import TocosDesktop from "../assets/images/devices/tocos-desktop.webp"
 import { motion } from "framer-motion"
 
 const Projects = () => {
@@ -99,6 +100,24 @@ const Projects = () => {
       className="text-sm lg:text-md text-[#E6EDF7] hover:text-[#7AA2F7] hover:underline underline-offset-4 transition-all duration-300">
         View Code
       </a>
+    </div>
+
+    <div className="border-b border-[#CBD1D820] my-10"/>
+
+    <div className="flex flex-col gap-2">
+      <h2 className="text-slate-400 text-lg lg:text-xl">
+       Upcoming Project...
+      </h2>
+      <h2 className="text-slate-400 text-lg lg:text-xl font-semibold">
+       Tocos Arachnid
+      </h2>
+      <p className="text-slate-400 text-sm lg:text-base">
+        A full-stack e-commerce platform for an exotic pet store specializing in tarantulas — featuring product listings, species info, and a seamless checkout experience with login feature.
+      </p>
+    </div>
+
+    <div className="flex flex-col lg:flex-row justify-center items-center py-10 gap-10">
+      <img src={TocosDesktop} alt="Lulu Desktop" className="max-w-40 md:max-w-60 lg:max-w-80 object-contain"/>
     </div>
 
     </motion.div>
