@@ -1,71 +1,73 @@
-import { useState } from "react"
-import { Pizza, Clock, CheckCircle, Store } from "lucide-react"
+import { Flame, Leaf, UtensilsCrossed, Pizza, Stars } from 'lucide-react'
+import { useState } from 'react'
+
+const Pizzas=[
+    { id: 1, name: "Margherieta", icon: Pizza, price: "299", color: "#f97316" },
+    { id: 2, name: "Pepperoni", icon: UtensilsCrossed, price: "399", color: "#ef4444" },
+    { id: 3, name: "BBQ Chicken", icon: Flame, price: "449", color: "#f59e0b" },
+    { id: 4, name: "Veggie Delight", icon: Leaf, price: "349", color: "#22c55e" },
+]
 
 const RefinePizza = () => {
 
-  const [message, setMessage] = useState(null);
-  const [completionMessage, setCompletionMessage] = useState("");
+    const [ order, setOrder ] = useState(false)
 
   return (
     <div>
-            <div className="w-[330px] md:w-[500px] h-[270px] md:h-[320px] bg-gradient-to-br from-[#1E1E1E] to-[#252A34] rounded-xl p-4 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-                <div className="flex flex-row gap-2 ">
-                <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#EC6765]" />
-                <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#414141]" />
-                <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#65C466]" />
-                </div>
-                <div className="p-6 flex flex-col items-center gap-4">
-                    <div className="flex flex-row  items-center gap-3">
-                    <Store className="text-[#E31B23]" />
-                    <h2 className="text-md md:text-lg lg:text-xl text-center text-white font-semibold">
-                        MoRa's Pizza Restaurent
-                    </h2>
-                    </div>
-                    <div className="flex flex-row items-center justify-center gap-6 transition-all duration-300 ease-out">
-                    <Pizza className="text-[#F97316] shadow-lg" />
-                    <button 
-                    onClick={() => setMessage("Order received! \n ETA: 15 minutes")}
-                    className="w-[140px] md:w-[200px] text-sm md:text-base px-4 py-2 bg-blue-500 hover:bg-blue-600 text-black font-semibold rounded-xl shadow-lg border border-blue-500">
-                        Order Pizza
-                    </button>
-                    </div>
-                    {message &&
-                    <div className="flex flex-row justify-center gap-4">
-                    <div className="flex flex-col gap-2 lg:gap-4">
-                    <Pizza className="text-[#F97316] w-3 lg:w-4 h-4" />
-                    <Clock className="text-[#22C55E] w-3 lg:w-4 h-4" />
-                    </div>
-                    <p className="text-sm lg:text-base text-white whitespace-pre-line">
-                        {message}
-                    </p>
-                    <button 
-                    onClick={() => { 
-                        setCompletionMessage("Order has completed! Collect it at the counter.")
-                        setMessage("");}}
-                    className="w-[80px] md:w-[140px] px-4 bg-orange-500 hover:bg-orange-600 text-sm lg:text-base text-white font-semibold rounded-xl">
-                        Track Order
-                    </button>
-                    </div>   
-                    }
-                    {completionMessage &&
-                    <div className="flex flex-row items-center gap-4 transition-all duration-300 ease-out">
-                    <CheckCircle className="text-green-500 mx-auto" />
-                    <p className="text-sm lg:text-base text-white whitespace-pre-line">
-                        {completionMessage}
-                    </p>
-                    <button 
-                    onClick={() => { 
-                        setCompletionMessage(""); 
-                        setMessage("");
-                    }}
-                    className="w-[80px] md:w-[100px] px-3 md:px-4 py-2 mt-[10px] bg-[#374151] hover:bg-[#4B5563] text-sm lg:text-base text-black font-semibold rounded">
-                        OK
-                    </button>
-                    </div>   
-                    }
-                </div>
+        <div className="w-[330px] md:w-[500px] h-[250px] md:h-[380px] bg-[#0d1117] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+            <div className="flex flex-row items-center gap-4 bg-[#111827] border-[#1e2d45] border-b py-2 px-4">
+            <div className="flex flex-row gap-2">
+            <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#EC6765]" />
+            <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#414141]" />
+            <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#65C466]" />
             </div>
+            <div>
+            <p className="text-[#334155]">moraspizza.in</p>
+            </div>
+            </div>
+
+            <div className="p-4">
+
+            <div className="my-2">
+                <h2 className="text-md font-semibold text-[#f1f5f9]">
+                    MoRa's <span className="text-[#f97316]">Pizza</span>
+                </h2>
+            </div>
+
+            <div className="bg-[#0f172a] border border-[#1e3a5f] py-1 px-4 w-[195px] rounded-xl my-2">
+               <p className="text-white text-xs text-[#38bdf8]">
+                    Free Delivery above all orders
+                </p>
+            </div>
+
+            <div className="flex flex-row gap-2 rounded-xl">
+                {Pizzas.map(({ id, name, price, icon: Icon, color }) => (
+                <div key={id} className="bg-[#161b27] flex flex-col min-h-[100px] w-[120px] items-start p-4 gap-2 rounded-xl my-2">
+                    <Icon color={color} />
+                    <p className="text-xs text-white">
+                        {name}
+                    </p>
+                    <p className="text-xs text-[#f97316]">
+                        ₹{price}
+                    </p>
+                </div>
+                ))}
+            </div>
+
+            <button
+            onClick={() => setOrder(true)}
+            className={`mt-2 p-2 w-full text-sm rounded-lg transition-all duration-300
+            ${order ? 
+            ("bg-amber-600 border border-amber-500 text-white") :
+            ("hover:bg-[#ea580c] border border-[#f97316] text-white") 
+            }`}>
+                {order ? "Your Order will be delivered in 30 mins." : "Order Now"}
+            </button>
+
+            </div>
+
         </div>
+    </div>
 
   )
 }
