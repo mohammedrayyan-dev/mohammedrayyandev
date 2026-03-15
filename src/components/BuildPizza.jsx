@@ -14,7 +14,7 @@ const BuildPizza = () => {
 
   return (
     <div>
-        <div className="w-[330px] md:w-[500px] h-[250px] md:h-[380px] bg-[#0d1117] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+        <div className="w-[330px] md:w-[500px] h-[550px] md:h-[380px] bg-[#0d1117] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
             <div className="flex flex-row items-center gap-4 bg-[#111827] border-[#1e2d45] border-b py-2 px-4">
             <div className="flex flex-row gap-2">
             <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#EC6765]" />
@@ -53,9 +53,9 @@ const BuildPizza = () => {
 
             </div>
 
-            <div className="flex flex-row gap-2 rounded-xl">
+            <div className="grid grid-cols-2 md:flex md:flex-row gap-2 rounded-xl">
                 {Pizzas.map(({ id, name, price, icon: Icon, color }) => (
-                <div key={id} className="bg-[#161b27] flex flex-col min-h-[100px] w-[120px] items-center p-4 gap-2 rounded-xl my-2">
+                <div key={id} className="bg-[#161b27] flex flex-col min-h-[100px] md:w-[120px] items-center p-4 gap-2 rounded-xl my-2">
                     <Icon color={color} />
                     <p className="text-xs text-white">
                         {name}
