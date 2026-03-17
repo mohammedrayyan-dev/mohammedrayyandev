@@ -2,7 +2,7 @@ import LinkedinIcon from "../assets/images/Icons/LinkedinIcon.png"
 import GithubIcon from "../assets/images/Icons/GithubIcon.png"
 import { X, Menu } from "lucide-react"
 import { useState, useEffect } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 
 const NavLinksDesktop = [
     { id: 1, name: "Projects", link: "/projects" },
@@ -23,7 +23,7 @@ const Navbar = () => {
 
     const [scrolled, setScrolled] = useState(false)
 
-    const [active, setActive] = useState(true)
+    const { pathname } = useLocation()
 
     const [menuOpen, setMenuOpen] = useState(false)
 
@@ -50,18 +50,16 @@ const Navbar = () => {
         <nav className="flex flex-row items-center gap-6">
         <Link
         to="/"
-        onClick={() => setActive(null)}
         className={`hover:text-[#7AA2F7] text-lg lg:text-xl font-semibold transition-all duration-300
-        ${active ? "text-[#C9D1E3]" : "text-[#7AA2F7]" }`}>
+        ${pathname !== "/" ? "text-[#C9D1E3]" : "text-[#7AA2F7]" }`}>
             Mohammed Rayyan
         </Link>
         {NavLinksDesktop.map((nav) => (
         <Link 
         key={nav.id} 
         to={nav.link} 
-        onClick={() => setActive(nav.id)}
         className={`hidden md:block hover:text-[#7AA2F7] md:text-sm lg:text-base font-lightbold transition-all duration-300
-        ${active === nav.id? "text-[#7AA2F7]" : "text-[#C9D1E3]" }`}>
+        ${pathname === nav.link ? "text-[#7AA2F7]" : "text-[#C9D1E3]" }`}>
             {nav.name}
         </Link>
         ))}
