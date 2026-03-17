@@ -2,13 +2,13 @@ import LinkedinIcon from "../assets/images/Icons/LinkedinIcon.png"
 import GithubIcon from "../assets/images/Icons/GithubIcon.png"
 import { X, Menu } from "lucide-react"
 import { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 const NavLinksDesktop = [
-    { name: "Projects", link: "/projects" },
-    { name: "Skills & Tools", link: "/skills-&-tools" },
-    { name: "Experience", link: "/experience" },
-    { name: "Contact", link: "/contact" },
+    { id: 1, name: "Projects", link: "/projects" },
+    { id: 2, name: "Skills & Tools", link: "/skills-&-tools" },
+    { id: 3, name: "Experience", link: "/experience" },
+    { id: 4, name: "Contact", link: "/contact" },
 ]
 
 const NavLinksMobile = [
@@ -22,6 +22,8 @@ const NavLinksMobile = [
 const Navbar = () => {
 
     const [scrolled, setScrolled] = useState(false)
+
+    const [active, setActive] = useState(true)
 
     const [menuOpen, setMenuOpen] = useState(false)
 
@@ -48,14 +50,18 @@ const Navbar = () => {
         <nav className="flex flex-row items-center gap-6">
         <Link
         to="/"
-        className="text-[#7AA2F7] text-lg lg:text-xl font-semibold">
+        onClick={() => setActive(null)}
+        className={`hover:text-[#7AA2F7] text-lg lg:text-xl font-semibold transition-all duration-300
+        ${active ? "text-[#C9D1E3]" : "text-[#7AA2F7]" }`}>
             Mohammed Rayyan
         </Link>
         {NavLinksDesktop.map((nav) => (
         <Link 
-        key={nav.name} 
+        key={nav.id} 
         to={nav.link} 
-        className="hidden md:block text-[#C9D1E3] hover:text-[#7AA2F7] md:text-sm lg:text-base font-lightbold transition-all duration-300">
+        onClick={() => setActive(nav.id)}
+        className={`hidden md:block hover:text-[#7AA2F7] md:text-sm lg:text-base font-lightbold transition-all duration-300
+        ${active === nav.id? "text-[#7AA2F7]" : "text-[#C9D1E3]" }`}>
             {nav.name}
         </Link>
         ))}
