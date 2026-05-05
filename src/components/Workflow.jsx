@@ -8,6 +8,30 @@ import BuildPizza from "./BuildPizza"
 import RefinePizza from "./RefinePizza"
 import { motion } from "framer-motion"
 
+const WorkFLow = [
+    {
+        index: 0,
+        title: "Plan",
+        icon: Lightbulb,
+        color: "#F7C948",
+        description: "Understand requirements, define scope, and break problems into clear, actionable components.",
+    },
+    {
+        index: 1,
+        title: "Build",
+        icon: Code,
+        color: "#7AA2F7",
+        description: "Develop clean, reusable components with a focus on performance, accessibility, and responsiveness.",
+    },
+    {
+        index: 2,
+        title: "Refine",
+        icon: Sparkles,
+        color: "#9D7AF7",
+        description: "Test, iterate, and improve based on feedback—ensuring the final interface is polished and reliable.",
+    }
+]
+
 const Stratergys = [
     {
         index: 0,
@@ -42,58 +66,26 @@ const Workflow = () => {
         transition={{ duration: 0.5 }} 
         className="flex flex-col md:flex-row gap-10 py-[80px] md:py-[120px] lg:py-[150px] justify-center items-center max-w-7xl mx-auto">
 
-        <div className="flex flex-col items-start gap-4">
+        <div className="flex flex-col md:flex-row gap-6">
+        {WorkFLow.map(( { title, description, icon: Icon, color }) => (
+        <div className="flex flex-col items-start gap-4 p-8 border border-white/10 bg-transparent backdrop-blur-md rounded-2xl">
         <div className="flex flex-row items-center gap-4">
         <div className="h-[45px] md:h-[60px] w-[45px] md:w-[60px] bg-blue-500/10 rounded-full flex items-center justify-center">
-            <div className="max-w-[35px] lg:max-w-[45px]">
-                <Lightbulb className="w-full h-full text-blue-400" />
+            <div className="max-w-[30px] lg:max-w-[40px]">
+                <Icon className="w-full h-full" color={color} />
             </div>
         </div>
         <div className="w-[80px] md:w-[100px] h-[30px] md:h-[40px] bg-transparent backdrop-blur border border-white/10 flex items-center justify-center rounded-full">
             <h2 className="text-[#E6E8EB] text-md lg:text-lg font-semibold">
-                Plan
+                {title}
             </h2>
         </div>
         </div>
         <p className="text-[#9CA3AF80] text-sm lg:text-base pt-[6px] max-w-xs text-left"> 
-            Understand requirements, define scope, and break problems into clear, actionable components.
+            {description}
         </p>
         </div>
-
-         <div className="flex flex-col items-start gap-4">
-        <div className="flex flex-row items-center gap-4">
-        <div className="h-[45px] md:h-[60px] w-[45px] md:w-[60px] bg-blue-500/10 rounded-full flex items-center justify-center">
-            <div className="max-w-[35px] md:max-w-[45px]">
-                <Code className="w-full h-full text-purple-400" />
-            </div>
-        </div>
-        <div className="w-[80px] md:w-[100px] h-[30px] md:h-[40px] bg-transparent backdrop-blur border border-white/10 flex items-center justify-center rounded-full">
-            <h2 className="text-[#E6E8EB] text-md lg:text-lg font-semibold">
-                Build
-            </h2>
-        </div>
-        </div>
-        <p className="text-[#9CA3AF80] text-sm lg:text-base pt-[6px] max-w-xs text-left"> 
-            Develop clean, reusable components with a focus on performance, accessibility, and responsiveness.
-        </p>
-        </div>
-
-         <div className="flex flex-col items-start gap-4">
-        <div className="flex flex-row items-center gap-4">
-        <div className="h-[45px] md:h-[60px] w-[45px] md:w-[60px] bg-blue-500/10 rounded-full flex items-center justify-center">
-            <div className="max-w-[35px] md:max-w-[45px]">
-                <Sparkles className="w-full h-full text-green-400" />
-            </div>
-        </div>
-        <div className="w-[80px] md:w-[100px] h-[30px] md:h-[40px] bg-transparent backdrop-blur border border-white/10 flex items-center justify-center rounded-full">
-            <h2 className="text-[#E6E8EB] text-md lg:text-lg font-semibold">
-                Refine
-            </h2>
-        </div>
-        </div>
-        <p className="text-[#9CA3AF80] text-sm lg:text-base pt-[6px] max-w-xs text-left"> 
-            Test, iterate, and improve based on feedback—ensuring the final interface is polished and reliable.
-        </p>
+        ))}
         </div>
 
         </motion.div>
