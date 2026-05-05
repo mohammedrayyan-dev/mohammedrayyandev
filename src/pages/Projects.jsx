@@ -1,4 +1,7 @@
 import Grid from "../assets/images/ui/grid.png"
+import QwestDesktop from "../assets/images/devices/qwest-desktop.png"
+import QwestIpad from "../assets/images/devices/qwest-ipad.png"
+import QwestIphone from "../assets/images/devices/qwest-iphone.png"
 import LuluDesktop from "../assets/images/devices/lulu-desktop.webp"
 import LuluIpad from "../assets/images/devices/lulu-ipad.webp"
 import LuluIphone from "../assets/images/devices/lulu-iphone.webp"
@@ -34,7 +37,41 @@ const Projects = () => {
     initial={{ opacity: 0, y: -30}}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5 }}
-    className="border-l border-[#CBD1D820] pl-10 lg:pl-20"> 
+    className="border-l border-[#CBD1D820] pl-10 lg:pl-20">
+
+    <div className="flex flex-col gap-2">
+      <h2 className="text-[#7AA2F7] text-lg lg:text-xl font-semibold">
+        Qwest
+      </h2>
+      <p className="text-[#CBD1D880] text-sm lg:text-base">
+        A modern Todo App with user authentication. Users can sign up, log in, and manage their tasks efficiently.
+      </p>
+    </div>
+
+    <div className="flex flex-col lg:flex-row justify-center items-center py-10 gap-10">
+      <img src={QwestDesktop} alt="Qwest Desktop" className="max-w-40 md:max-w-60 lg:max-w-80 object-contain"/>
+      <img src={QwestIpad} alt="Qwest Ipad" className="max-w-40 md:max-w-60 lg:max-w-80 object-contain"/>
+      <img src={QwestIphone} alt="Qwest Iphone" className="max-w-40 md:max-w-60 lg:max-w-80 max-h-40 md:max-h-60 lg:max-h-80 object-contain"/>
+    </div>
+
+    <div className="flex flex-row gap-4">
+      <a
+      href="https://www.qwest-seven.vercel.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-sm lg:text-md text-[#E6EDF7] hover:text-[#7AA2F7] hover:underline underline-offset-4 transition-all duration-300">
+        View Project
+      </a>
+      <a
+      href="https://github.com/mohammedrayyan-dev/Qwest.git"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-sm lg:text-md text-[#E6EDF7] hover:text-[#7AA2F7] hover:underline underline-offset-4 transition-all duration-300">
+        View Code
+      </a>
+    </div> 
+
+    <div className="border-b border-[#CBD1D820] my-10"/>
 
     <div className="flex flex-col gap-2">
       <h2 className="text-[#7AA2F7] text-lg lg:text-xl font-semibold">
