@@ -4,11 +4,10 @@ import Footer from "../components/Footer.jsx"
 
 const layout = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-[#0F1115] font-outfit">
-
+    <div className="min-h-screen bg-gradient-to-br from-[#0f0708] via-[#1a0a0d] to-[#0d0506] font-outfit">
         <Navbar/>
         <main className="flex-1">
-            <div className="space-y-24">
+            <div>
                 <Outlet />
             </div>
         </main>
