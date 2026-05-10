@@ -52,12 +52,14 @@ const Process = () => {
         className="flex flex-col gap-10 justify-center items-center min-h-dvh pt-20 md:pt-0">
 
             <h1 className="text-[#E6E8EB] text-xl md:text-2xl lg:text-3xl">
-                Beleive in the process
+                Believe in the process
             </h1>
 
         <div className="flex flex-col md:flex-row gap-6">
         {Processess.map(( { title, number, description, icon: Icon, color }) => (
-        <div className="flex flex-col items-start gap-4 p-8 bg-[#0a0a0a] hover:bg-[#7f1d1d] border border-[#2a2a2a] hover:border-[#ef4444] backdrop-blur-md rounded-2xl">
+        <motion.div 
+        whileHover={{ scale: 1.05}}
+        className="flex flex-col items-start gap-4 p-8 bg-[#0a0a0a] hover:bg-[#7f1d1d] border border-[#2a2a2a] hover:border-[#ef4444] backdrop-blur-md rounded-2xl">
 
         <div className="flex flex-col items-center gap-4">
 
@@ -81,7 +83,7 @@ const Process = () => {
         <p className="text-[#616161] text-sm pt-[6px] max-w-xs text-left"> 
             {description}
         </p>
-        </div>
+        </motion.div>
         ))}
         </div>
 
