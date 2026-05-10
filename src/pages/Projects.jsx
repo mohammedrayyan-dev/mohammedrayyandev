@@ -1,4 +1,3 @@
-import Grid from "../assets/images/ui/grid.png"
 import QwestDesktop from "../assets/images/devices/qwest-desktop.png"
 import QwestIpad from "../assets/images/devices/qwest-ipad.png"
 import QwestIphone from "../assets/images/devices/qwest-iphone.png"

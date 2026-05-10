@@ -1,4 +1,4 @@
-import MyPhoto from "../assets/images/my-photo.png"
+import MyPhoto from "../assets/images/ui/my-photo.png"
 import { FileText, MoveRight } from "lucide-react"
 import { useNavigate } from "react-router-dom"
 import { motion } from "framer-motion"

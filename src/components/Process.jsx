@@ -3,9 +3,6 @@ import { Brain,
     Rocket,
  } from "lucide-react"
 import { useState } from "react"
-import PlanPizza from "./PlanPizza"
-import BuildPizza from "./BuildPizza"
-import RefinePizza from "./RefinePizza"
 import { motion } from "framer-motion"
 import Container from "./common/Container"
 

@@ -1,4 +1,3 @@
-import Grid from "../assets/images/ui/grid.png"
 import { motion } from "framer-motion"
 
 const Skills= {
@@ -14,7 +13,6 @@ const SkillsTools = () => {
     <>
     <div className="relative bg-gradient-to-b from-[#141C2B] to-transparent overflow-hidden pt-10 lg:pt-20 pb-40 px-5 md:px-10 lg:px-20"> 
     
-      <img src={Grid} alt="Grid" className="absolute inset-0 w-full object-contain [mask-image:linear-gradient(to_bottom,black,transparent)]"/>
 
     <div className="relative flex flex-col gap-10 max-w-6xl mx-auto">
 
