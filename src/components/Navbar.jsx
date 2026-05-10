@@ -89,7 +89,7 @@ const Navbar = () => {
             className="flex"
             onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? 
-            <X className="text-[#6b6b6b] w-5 h-5"/>
+            <X className="text-red-500 w-5 h-5"/>
             : <Menu className="text-[#6b6b6b] w-5 h-5"/>
             }
             </button>
