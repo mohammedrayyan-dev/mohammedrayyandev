@@ -53,7 +53,7 @@ const Navbar = () => {
         <Link
         to="/"
         className={`hover:text-red-500 text-lg lg:text-2xl font-bold transition-all duration-300
-        ${pathname !== "/" ? "text-[#ffffff]" : "text-red-500" }`}>
+        ${pathname !== "/" ? "text-[#ffffff]" : "text-[#dc2626]" }`}>
             MR <span className="text-[#ffffff]">.</span>
         </Link>
 
@@ -67,7 +67,7 @@ const Navbar = () => {
         key={nav.id} 
         to={nav.link} 
         className={`hidden md:block hover:text-red-500 text-sm lg:text-base font-semibold transition-all duration-300
-        ${pathname === nav.link ? "text-red-500" : "text-[#6b6b6b]" }`}>
+        ${pathname === nav.link ? "text-[#dc2626]" : "text-[#6b6b6b]" }`}>
             {nav.name}
         </Link>
         ))}
