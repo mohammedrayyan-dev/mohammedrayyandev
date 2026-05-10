@@ -21,7 +21,7 @@ const FinishedProjects = [
     mimg: QwestIphone,
     dimg: QwestDesktop,
     timg: QwestIpad,
-    live: "https://www.qwest-seven.vercel.app/",
+    live: "https://qwest-seven.vercel.app/",
     github: "https://github.com/mohammedrayyan-dev/Qwest.git"
    },
    { 
@@ -41,7 +41,7 @@ const FinishedProjects = [
     mimg: ProfinaIphone,
     dimg: ProfinaDesktop,
     timg: ProfinaIpad,
-    live: "https://www.profina.vercel.app/",
+    live: "https://profina.vercel.app/",
     github: "https://github.com/mohammedrayyan-dev/Profina.git"
    },
   ]
