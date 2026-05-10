@@ -1,12 +1,11 @@
-import LinkedinIcon from "../assets/images/Icons/LinkedinIcon.png"
-import GithubIcon from "../assets/images/Icons/GithubIcon.png"
-import { X, Menu } from "lucide-react"
+import { X, Menu, Github, Linkedin } from "lucide-react"
 import { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
+import Container from "./common/Container"
 
 const NavLinksDesktop = [
     { id: 1, name: "Projects", link: "/projects" },
-    { id: 2, name: "Skills & Tools", link: "/skills-&-tools" },
+    { id: 2, name: "Skills", link: "/skills" },
     { id: 3, name: "Experience", link: "/experience" },
     { id: 4, name: "Contact", link: "/contact" },
 ]
@@ -14,7 +13,7 @@ const NavLinksDesktop = [
 const NavLinksMobile = [
     { name: "Home", link: "/" },
     { name: "Projects", link: "/projects" },
-    { name: "Skills & Tools", link: "/skills-&-tools" },
+    { name: "Skills", link: "/skills" },
     { name: "Experience", link: "/experience" },
     { name: "Contact", link: "/contact" },
 ]
@@ -37,60 +36,77 @@ const Navbar = () => {
     }, []);
 
   return (
-
+    
     <header className={`sticky top-0 z-50 transition-all duration-300
      ${scrolled || menuOpen
-        ? "border-b border-white/10 bg-transparent backdrop-blur-md"
+        ? "border-b border-[#1a1a1a] bg-[#0f0708]/50 backdrop-blur-md"
         : "border-b border-transparent bg-transparent "}`}
         >
-    <div className="py-4 px-5 md:px-6 lg:px-20 max-w-[1800px] mx-auto">
-
+        
+        <nav className="py-4 w-full mx-auto">
+        
+        <Container>
+        
         <div className="flex flex-row justify-between">
-
-        <nav className="flex flex-row items-center gap-6">
+        
+        {/* Logo */}
         <Link
         to="/"
-        className={`hover:text-[#7AA2F7] text-lg lg:text-xl font-semibold transition-all duration-300
-        ${pathname !== "/" ? "text-[#C9D1E3]" : "text-[#7AA2F7]" }`}>
-            Mohammed Rayyan
+        className={`hover:text-red-500 text-lg lg:text-2xl font-bold transition-all duration-300
+        ${pathname !== "/" ? "text-[#ffffff]" : "text-red-500" }`}>
+            MR <span className="text-[#ffffff]">.</span>
         </Link>
+
+        {/* Desktop Navigation Links */}
+
+        <div className="flex flex-row items-center gap-4 md:gap-8">
+        
+        <div className="flex flex-row items-center gap-6">
         {NavLinksDesktop.map((nav) => (
         <Link 
         key={nav.id} 
         to={nav.link} 
-        className={`hidden md:block hover:text-[#7AA2F7] md:text-sm lg:text-base font-lightbold transition-all duration-300
-        ${pathname === nav.link ? "text-[#7AA2F7]" : "text-[#C9D1E3]" }`}>
+        className={`hidden md:block hover:text-red-500 text-sm lg:text-base font-semibold transition-all duration-300
+        ${pathname === nav.link ? "text-red-500" : "text-[#6b6b6b]" }`}>
             {nav.name}
         </Link>
         ))}
-        </nav>
+        </div>
 
-        <div className="flex flex-row items-center gap-4">
+        <div className="flex flex-row gap-4">
             <a href="https://www.linkedin.com/in/mohammedrayyan-dev" target="_blank" className="flex items-center justify-center w-4 md:w-5 lg:w-6 cursor-pointer rounded-lg">
-            <img src={LinkedinIcon} alt="Linkedin Icon" className="w-full h-full object-contain" />
+            <Linkedin className="text-[#6b6b6b] hover:text-red-500 w-full h-full object-contain" />
             </a>
             <a href="https://github.com/mohammedrayyan-dev" target="_blank" className="flex items-center justify-center w-4 md:w-5 lg:w-6 cursor-pointer rounded-lg">
-            <img src={GithubIcon} alt="Github Icon" className="w-full h-full object-contain" />
+            <Github className="text-[#6b6b6b] hover:text-red-500 w-full h-full object-contain" />
             </a>
+        </div>
 
-            {/* Hamburger Menu */}
-            <div className="block md:hidden">
-                <button
-                className="flex"
-                onClick={() => setMenuOpen(!menuOpen)}>
-                {menuOpen ? 
-                <X className="text-gray-400 w-5 h-5"/>
-                : <Menu className="text-gray-400 w-5 h-5"/>
-                }
-                </button>
-            </div>
+        {/* Mobile Hamburger Menu */}
 
+        <div className="block md:hidden">
+            <button
+            className="flex"
+            onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? 
+            <X className="text-[#6b6b6b] w-5 h-5"/>
+            : <Menu className="text-[#6b6b6b] w-5 h-5"/>
+            }
+            </button>
         </div>
 
         </div>
+
+        </div>
+        
+        </Container>
+
+        </nav>
+
+        {/* Mobile Hamburger Ui */}
 
         {menuOpen && (
-        <div className="absolute md:hidden flex flex-col items-center gap-2 top-16 right-2 bg-[#0F1115]/80 border border-white/10 text-[#C9D1E3] text-sm p-3 rounded-xl">
+        <div className="absolute md:hidden flex flex-col items-center text-[#6b6b6b] text-sm font-semibold gap-2 top-16 right-2 bg-[#0f0708]/50 border border-[#1a1a1a] p-3 rounded-xl">
             {NavLinksMobile.map((n) => (
             <Link 
             to={n.link}
@@ -101,8 +117,6 @@ const Navbar = () => {
         </div>
         )}
         
-
-    </div>
     </header>
   )
 }
