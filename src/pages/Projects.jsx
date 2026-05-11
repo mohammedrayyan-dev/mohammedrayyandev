@@ -51,7 +51,7 @@ const Projects = () => {
 
     <Container>
 
-    <div className="overflow-hidden pt-10 lg:pt-20 pb-40"> 
+    <div className="pt-10 lg:pt-20 pb-40"> 
 
     <div className="flex flex-col gap-10">
 
