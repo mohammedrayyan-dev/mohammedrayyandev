@@ -1,14 +1,16 @@
 
 import { motion } from "framer-motion"
+import Container from "../components/common/Container"
 
 const Experience = () => {
   return (
     <>
-    <div className="relative bg-gradient-to-b from-[#141C2B] to-transparent overflow-hidden pt-10 lg:pt-20 pb-40 px-5 md:px-10 lg:px-20"> 
-    
-  
 
-    <div className="relative flex flex-col gap-10 max-w-6xl mx-auto">
+    <Container>
+
+    <div className=" pt-10 lg:pt-20 pb-40"> 
+
+    <div className="flex flex-col gap-10">
 
     <motion.div 
     initial={{ opacity: 0, x: -30 }}
@@ -27,25 +29,25 @@ const Experience = () => {
     initial={{ opacity: 0, y: -30 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5 }}
-    className="border-l border-[#CBD1D820] pl-10 lg:pl-20"> 
+    className=""> 
 
     <div className="flex flex-col gap-4">
-      <h2 className="text-[#7AA2F7] text-lg md:text-2xl lg:text-3xl font-semibold">
-        Front-End Developer <span className="text-[#CBD1D8]">(Freelance)</span>
+      <h2 className="text-red-500 text-lg md:text-2xl lg:text-3xl font-semibold">
+        Front-End Developer <span className="text-[#ffffff]">(Freelance)</span>
       </h2>
-      <p className="text-[#CBD1D890] text-lg lg:text-xl">
+      <p className="text-[#666666] text-lg lg:text-xl">
         Dec 2025 - Present
       </p>
       <p className="text-[#CBD1D8] text-lg lg:text-xl">
         Klyros Craft
       </p>
-      <p className="text-[#CBD1D880] text-sm lg:text-base">
+      <p className="text-[#666666] text-sm lg:text-base">
         Frontend Developer delivering responsive, production-ready web interfaces for client projects. Experienced in building clean, reusable component-based applications using React and modern frontend tooling. Focused on translating UI designs into performant, responsive user interfaces that provide a consistent experience across devices.
       </p>
-      <p className="text-[#CBD1D880] text-sm lg:text-base">
+      <p className="text-[#666666] text-sm lg:text-base">
         Work Highlights
       </p>
-        <ul className="flex flex-col gap-2 list-disc list-inside text-[#CBD1D880] text-sm lg:text-base">
+        <ul className="flex flex-col gap-2 list-disc list-inside text-[#666666] text-sm lg:text-base">
           <li>
             Build responsive frontend interfaces using React, TypeScript, and modern CSS frameworks such as Tailwind CSS and Material UI
           </li>
@@ -70,22 +72,22 @@ const Experience = () => {
     <div className="border-b border-[#CBD1D820] my-10"/>
 
     <div className="flex flex-col gap-4">
-      <h2 className="text-[#7AA2F7] text-lg md:text-2xl lg:text-3xl font-semibold">
+      <h2 className="text-red-500 text-lg md:text-2xl lg:text-3xl font-semibold">
         SDE Intern
       </h2>
-      <p className="text-[#CBD1D890] text-lg lg:text-xl">
+      <p className="text-[#666666] text-lg lg:text-xl">
         Sep 2025 - Nov 2025
       </p>
       <p className="text-[#CBD1D8] text-lg lg:text-xl">
         Larklabs.ai
       </p>
-      <p className="text-[#CBD1D880] text-sm lg:text-base">
+      <p className="text-[#666666] text-sm lg:text-base">
         Worked as a Software Development Engineer (SDE) Intern with a focus on frontend development using React and JavaScript, contributing to production-level UI development and maintenance.
       </p>
-      <p className="text-[#CBD1D880] text-sm lg:text-base">
+      <p className="text-[#666666] text-sm lg:text-base">
         Key Contributions
       </p>
-        <ul className="flex flex-col gap-2 list-disc list-inside text-[#CBD1D880] text-sm lg:text-base">
+        <ul className="flex flex-col gap-2 list-disc list-inside text-[#666666] text-sm lg:text-base">
           <li>
             Developed and maintained reusable UI components using React
           </li>
@@ -112,6 +114,9 @@ const Experience = () => {
     </div>
 
     </div>
+
+    </Container>
+    
     </>
   )
 }
