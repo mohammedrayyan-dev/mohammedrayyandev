@@ -1,122 +1,182 @@
-import { X, Menu, Github, Linkedin } from "lucide-react"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Link, useLocation } from "react-router-dom"
+import { Menu, X, ArrowUpRight, Github, Linkedin } from "lucide-react"
 import Container from "./common/Container"
 
-const NavLinksDesktop = [
-    { id: 1, name: "Projects", link: "/projects" },
-    { id: 2, name: "Skills", link: "/skills" },
-    { id: 3, name: "Experience", link: "/experience" },
-    { id: 4, name: "Contact", link: "/contact" },
-]
-
-const NavLinksMobile = [
-    { name: "Home", link: "/" },
-    { name: "Projects", link: "/projects" },
-    { name: "Skills", link: "/skills" },
-    { name: "Experience", link: "/experience" },
-    { name: "Contact", link: "/contact" },
+const navLinks = [
+  { name: "Projects", path: "/projects" },
+  { name: "Skills", path: "/skills" },
+  { name: "Experience", path: "/experience" },
+  { name: "Contact", path: "/contact" },
 ]
 
 const Navbar = () => {
-
-    const [scrolled, setScrolled] = useState(false)
-
-    const { pathname } = useLocation()
-
-    const [menuOpen, setMenuOpen] = useState(false)
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 50)
-        }
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+  const { pathname } = useLocation()
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    
-    <header className={`sticky top-0 z-50 transition-all duration-300
-     ${scrolled || menuOpen
-        ? "border-b border-[#1a1a1a] bg-[#0f0708]/50 backdrop-blur-md"
-        : "border-b border-transparent bg-transparent "}`}
-        >
-        
-        <nav className="py-4 w-full mx-auto">
-        
-        <Container>
-        
-        <div className="flex flex-row justify-between">
-        
-        {/* Logo */}
-        <Link
-        to="/"
-        className={`hover:text-red-500 text-lg lg:text-2xl font-bold transition-all duration-300
-        ${pathname !== "/" ? "text-[#ffffff]" : "text-[#dc2626]" }`}>
-            MR <span className="text-[#ffffff]">.</span>
-        </Link>
+    <header className="sticky top-0 z-50 w-full bg-[#f9f8f6]/90 backdrop-blur-md border-b border-stone-200/80">
+      <Container>
+        <div className="h-16 sm:h-20 flex items-center justify-between">
+          
+          {/* Brand Logo */}
+          <Link
+            to="/"
+            className="flex items-center gap-1 group py-1"
+          >
+            <span className="font-bold text-base sm:text-lg tracking-tight text-stone-900 group-hover:text-stone-700 transition-colors">
+              Mohammed Rayyan
+            </span>
+            <span className="text-[#b36b47] font-extrabold text-base sm:text-lg leading-none">
+              .
+            </span>
+          </Link>
 
-        {/* Desktop Navigation Links */}
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center gap-8">
+            <div className="flex items-center gap-6">
+              <Link
+                to="/"
+                className={`text-sm font-medium transition-colors relative py-1 ${
+                  pathname === "/"
+                    ? "text-stone-950 font-semibold"
+                    : "text-stone-500 hover:text-stone-900"
+                }`}
+              >
+                Home
+                {pathname === "/" && (
+                  <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-stone-950 to-[#b36b47] rounded-full" />
+                )}
+              </Link>
 
-        <div className="flex flex-row items-center gap-4 md:gap-8">
-        
-        <div className="flex flex-row items-center gap-6">
-        {NavLinksDesktop.map((nav) => (
-        <Link 
-        key={nav.id} 
-        to={nav.link} 
-        className={`hidden md:block hover:text-red-500 text-sm lg:text-base font-semibold transition-all duration-300
-        ${pathname === nav.link ? "text-[#dc2626]" : "text-[#6b6b6b]" }`}>
-            {nav.name}
-        </Link>
-        ))}
+              {navLinks.map((link) => {
+                const isActive = pathname === link.path
+                return (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className={`text-sm font-medium transition-colors relative py-1 ${
+                      isActive
+                        ? "text-stone-950 font-semibold"
+                        : "text-stone-500 hover:text-stone-900"
+                    }`}
+                  >
+                    {link.name}
+                    {isActive && (
+                      <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-stone-950 to-[#b36b47] rounded-full" />
+                    )}
+                  </Link>
+                )
+              })}
+            </div>
+
+            {/* Right Divider & Socials */}
+            <div className="h-4 w-[1px] bg-stone-300" />
+
+            <div className="flex items-center gap-3">
+              <a
+                href="https://github.com/mohammedrayyan-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="text-stone-500 hover:text-stone-900 transition-colors p-1"
+              >
+                <Github className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mohammedrayyan-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-stone-500 hover:text-stone-900 transition-colors p-1"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
+
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-2 inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold bg-stone-950 hover:bg-stone-800 text-white border border-stone-800 shadow-sm transition-all"
+              >
+                <span>Resume</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-[#c87d55]" />
+              </a>
+            </div>
+          </nav>
+
+          {/* Mobile Hamburger Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle navigation menu"
+            className="md:hidden p-2 rounded-lg text-stone-600 hover:text-stone-900 hover:bg-stone-200/50 border border-stone-200"
+          >
+            {mobileMenuOpen ? <X className="w-5 h-5 text-stone-900" /> : <Menu className="w-5 h-5" />}
+          </button>
+
         </div>
+      </Container>
 
-        <div className="flex flex-row gap-4">
-            <a href="https://www.linkedin.com/in/mohammedrayyan-dev" target="_blank" className="flex items-center justify-center w-4 md:w-5 lg:w-6 cursor-pointer rounded-lg">
-            <Linkedin className="text-[#6b6b6b] hover:text-red-500 w-full h-full object-contain" />
+      {/* Mobile Menu Dropdown Bar */}
+      {mobileMenuOpen && (
+        <div className="md:hidden border-t border-stone-200 bg-[#f9f8f6] px-6 py-4 space-y-3 shadow-lg">
+          <Link
+            to="/"
+            onClick={() => setMobileMenuOpen(false)}
+            className={`block py-2 text-sm font-medium ${
+              pathname === "/" ? "text-stone-950 font-bold" : "text-stone-700"
+            }`}
+          >
+            Home
+          </Link>
+
+          {navLinks.map((link) => {
+            const isActive = pathname === link.path
+            return (
+              <Link
+                key={link.path}
+                to={link.path}
+                onClick={() => setMobileMenuOpen(false)}
+                className={`block py-2 text-sm font-medium ${
+                  isActive ? "text-stone-950 font-bold" : "text-stone-700"
+                }`}
+              >
+                {link.name}
+              </Link>
+            )
+          })}
+
+          <div className="pt-3 border-t border-stone-200 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <a
+                href="https://github.com/mohammedrayyan-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-stone-500 hover:text-stone-900 p-1"
+              >
+                <Github className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mohammedrayyan-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-stone-500 hover:text-stone-900 p-1"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
+            </div>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="px-4 py-1.5 rounded-lg text-xs font-semibold bg-stone-950 text-white"
+            >
+              Resume ↗
             </a>
-            <a href="https://github.com/mohammedrayyan-dev" target="_blank" className="flex items-center justify-center w-4 md:w-5 lg:w-6 cursor-pointer rounded-lg">
-            <Github className="text-[#6b6b6b] hover:text-red-500 w-full h-full object-contain" />
-            </a>
+          </div>
         </div>
-
-        {/* Mobile Hamburger Menu */}
-
-        <div className="block md:hidden">
-            <button
-            className="flex"
-            onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? 
-            <X className="text-red-500 w-5 h-5"/>
-            : <Menu className="text-[#6b6b6b] w-5 h-5"/>
-            }
-            </button>
-        </div>
-
-        </div>
-
-        </div>
-        
-        </Container>
-
-        </nav>
-
-        {/* Mobile Hamburger Ui */}
-
-        {menuOpen && (
-        <div className="absolute md:hidden flex flex-col items-center text-[#6b6b6b] text-sm font-semibold gap-2 top-16 right-2 bg-[#0f0708]/50 border border-[#1a1a1a] p-3 rounded-xl">
-            {NavLinksMobile.map((n) => (
-            <Link 
-            to={n.link}
-            onClick={() => setMenuOpen(false)}>
-                {n.name}
-            </Link>
-            ))}
-        </div>
-        )}
-        
+      )}
     </header>
   )
 }

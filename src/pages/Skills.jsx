@@ -1,124 +1,194 @@
-import { motion } from "framer-motion"
+import { Code2, Palette, Wrench, Layout, Zap, ShieldCheck, Sparkles, Database, Server } from "lucide-react"
 import Container from "../components/common/Container"
 
-const Skill= {
-  "Programming Languages": ["JavaScript", "TypeScript"],
-  "Core Web": ["HTML5", "CSS3", "Responsive Web Design", "REST APIs"],
-  "Frameworks & Libraries": ["React", "Material UI", "Framer Motion"],
-  "Styling": ["Tailwind CSS"],
-  "Tools": ["Git & GitHub", "Vite", "VS Code", "Chrome DevTools", "Figma"]
-}
+const skillCategories = [
+  {
+    title: "Core Frontend Development",
+    icon: Code2,
+    description: "The fundamental technologies and runtime engines powering my client-facing web applications.",
+    skills: [
+      { name: "React.js", level: "Production", desc: "Hooks, Context API, component hierarchy, modular state patterns" },
+      { name: "JavaScript (ES6+)", level: "Production", desc: "Async/await, DOM APIs, modern ES features, functional patterns" },
+      { name: "TypeScript", level: "Proficient", desc: "Type safety, clean interfaces, defensive typing practices" },
+      { name: "HTML5 & Semantic Web", level: "Production", desc: "Accessible markup, standard SEO meta structure, clean DOM" },
+    ],
+  },
+  {
+    title: "Backend & Database Systems",
+    icon: Server,
+    description: "Server-side runtimes, relational database architecture, and persistent data engineering.",
+    skills: [
+      { name: "Node.js", level: "Production", desc: "Express architecture, asynchronous runtime, RESTful backend services" },
+      { name: "PostgreSQL", level: "Production", desc: "Relational schema design, SQL queries, table indexing, data integrity" },
+      { name: "RESTful APIs", level: "Production", desc: "CRUD endpoint architecture, middleware pipelines, error handling" },
+      { name: "Database Modeling", level: "Proficient", desc: "Normalized schemas, foreign key relationships, migrations" },
+    ],
+  },
+  {
+    title: "Styling & Motion Systems",
+    icon: Palette,
+    description: "Creating sleek, fluid, and responsive design systems that delight users.",
+    skills: [
+      { name: "Tailwind CSS", level: "Production", desc: "Utility-first design tokens, responsive breakpoints, custom theme extensions" },
+      { name: "Framer Motion", level: "Proficient", desc: "Spring physics, layout animations, gestures, micro-interactions" },
+      { name: "Responsive Layouts", level: "Production", desc: "Mobile-first viewports, fluid typography, flexbox and CSS grids" },
+      { name: "Material UI", level: "Proficient", desc: "Component libraries, theming tokens, enterprise form layouts" },
+    ],
+  },
+  {
+    title: "Tooling, Ecosystem & Workflow",
+    icon: Wrench,
+    description: "Developer tooling ensuring rapid iterations, reliable builds, and collaborative delivery.",
+    skills: [
+      { name: "AI-Augmented Engineering", level: "Production", desc: "High-velocity development, Antigravity IDE, agentic workflows, automated refactoring" },
+      { name: "Git & GitHub", level: "Production", desc: "Branching strategies, version history, pull requests, collaborative delivery" },
+      { name: "Vite & Tooling", level: "Production", desc: "Hot Module Replacement, bundle optimization, rapid environment setup" },
+      { name: "Chrome DevTools", level: "Production", desc: "Performance profiling, network payloads, layout debugging" },
+      { name: "Figma to Code", level: "Proficient", desc: "Translating design specifications into pixel-perfect frontend code" },
+      { name: "VS Code & Antigravity", level: "Production", desc: "Optimized development environments with tailored extensions, ESLint, and Prettier" },
+    ],
+  },
+]
+
+const engineeringPrinciples = [
+  {
+    icon: Layout,
+    title: "Component-Driven Architecture",
+    description:
+      "I break down complex interfaces into atomic, reusable components that are isolated, self-contained, and easy to maintain as products scale.",
+  },
+  {
+    icon: Zap,
+    title: "Performance & Responsive First",
+    description:
+      "Every layout is built mobile-first with optimized assets and minimal re-renders to guarantee smooth interactions across all devices.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Clean & Maintainable Code",
+    description:
+      "I write predictable code with clear separation of concerns, defensive prop structures, and readability prioritized for team collaboration.",
+  },
+  {
+    icon: Sparkles,
+    title: "Visual Polish & Micro-Interactions",
+    description:
+      "Great software feels alive. I implement intentional micro-interactions and smooth transitions that guide users without being distracting.",
+  },
+]
 
 const Skills = () => {
   return (
-    <>
-
-    <Container>
-
-    <div className=" pt-10 lg:pt-20 pb-40"> 
-
-    <div className="flex flex-col gap-10">
-
-    <motion.div 
-    initial={{ opacity: 0, x: -30 }}
-    animate={{ opacity: 1, x: 0 }}
-    transition={{ duration: 0.5 }}
-    className="flex flex-col gap-4">
-      <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white">
-        Skills
-      </h1>
-      <p className="text-[#666666] text-sm lg:text-base">
-        A look at all the programming languages, libraries, and tools I've worked with
-      </p>
-    </motion.div>
-
-    <motion.div 
-    initial={{ opacity: 0, y: -30 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5 }}
-    className=""> 
-
-    <div className="flex flex-col gap-4">
-      <p className="text-[#666666] text-sm lg:text-base">
-      A front-end developer who enjoys turning ideas into clean, responsive web experiences. My journey into development started with curiosity about how modern websites work, and it quickly grew into a passion for building interfaces that feel smooth, intuitive, and visually polished.
-      </p>
-
-      <div className="border-b border-[#CBD1D820] my-10"/>
-
-      <h2 className="text-red-500 text-lg md:text-2xl lg:text-3xl font-semibold">
-        Front-End Developer
-      </h2>
-      <p className="text-[#666666] text-sm lg:text-base">
-        Production-ready React website for a real furniture business with responsive UI, reusable components, and performance optimizations.
-      </p>
-      <h3 className="text-[#CBD1D8] text-lg lg:text-xl font-semibold">
-        React
-      </h3>
-      <p className="text-[#666666] text-sm lg:text-base">
-        Most of the interfaces I build today revolve around React. I enjoy creating component-driven applications where pieces of the UI can be reused, scaled, and maintained easily. From simple landing pages to more structured layouts, React has become my go-to tool for building responsive web applications.
-      </p>
-      <h3 className="text-[#CBD1D8] text-lg lg:text-xl font-semibold">
-        JavaScript
-      </h3>
-      <p className="text-[#666666] text-sm lg:text-base">
-        Behind every interactive feature I build, JavaScript plays its role. I use it whenever logic, dynamic behavior, or state handling is required. Whether it’s handling events, managing application state, or controlling UI behavior, JavaScript is the core language that powers the projects I work on.
-      </p>
-      <h3 className="text-[#CBD1D8] text-lg lg:text-xl font-semibold">
-        Tailwind CSS
-      </h3>
-      <p className="text-[#666666] text-sm md:text-base">
-        For styling, Tailwind CSS is the framework I rely on the most. It allows me to rapidly build responsive layouts while keeping designs consistent and clean. I prefer Tailwind because it lets me focus on structure and user experience without spending unnecessary time writing custom CSS.
-      </p>
-      <h3 className="text-[#CBD1D8] text-lg lg:text-xl font-semibold">
-        Material UI
-      </h3>
-      <p className="text-[#666666] text-sm lg:text-base">
-        Occasionally, when a project benefits from ready-made components, I work with Material UI. It provides a solid set of UI components that help speed up development when a more structured design system is required.
-      </p>
-      <h3 className="text-[#CBD1D8] text-lg lg:text-xl font-semibold">
-        Framer Motion
-      </h3>
-      <p className="text-[#666666] text-sm lg:text-base">
-        Recently, I’ve started integrating Framer Motion to bring subtle animations into my interfaces. Smooth transitions and micro-interactions can significantly improve user experience, and I enjoy experimenting with motion to make interfaces feel more alive.
-      </p>
-    </div>
-
-    <div className="border-b border-[#CBD1D820] my-10"/>
-
-    <div className="flex flex-col gap-8">
-  {Object.entries(Skill).map(([category, skillList]) => (
-    <div key={category} className="flex flex-col gap-2">
-
-      <h4 className="text-[#CBD1D8] text-lg lg:text-xl font-semibold">
-        {category}
-      </h4>
-
-      <div className="flex flex-wrap gap-3">
-        {skillList.map((skill) => (
-          <div
-            key={skill}
-            className="bg-[#0a0a0a] px-4 py-1 md:py-2 rounded border-b border-red-500"
-          >
-            <span className="text-[#666666] text-xs lg:text-sm">
-              {skill}
+    <div className="py-12 sm:py-16 pb-28">
+      <Container>
+        <div className="space-y-16">
+          
+          {/* Page Header */}
+          <div className="space-y-4 max-w-3xl">
+            <span className="text-xs uppercase tracking-widest text-stone-500 font-semibold font-mono">
+              Technical Capabilities
             </span>
+            <h1 className="text-4xl sm:text-6xl font-extrabold text-stone-950 tracking-tight">
+              Skills & Architecture
+            </h1>
+            <p className="text-sm sm:text-base text-stone-600 leading-relaxed">
+              A comprehensive breakdown of the programming languages, frameworks, UI libraries, and engineering practices I use to build modern digital products.
+            </p>
           </div>
-        ))}
-      </div>
 
+          {/* Categorized Skills Bento Grid (2x2) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {skillCategories.map((category) => {
+              const Icon = category.icon
+              return (
+                <div
+                  key={category.title}
+                  className="rounded-3xl bg-white border border-stone-200 p-6 sm:p-8 flex flex-col justify-between gap-6 card-shadow hover:shadow-xl transition-all duration-300"
+                >
+                  <div className="space-y-4">
+                    {/* Category Header */}
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-xl bg-stone-100 border border-stone-200 flex items-center justify-center text-stone-900">
+                        <Icon className="w-5 h-5" />
+                      </div>
+                      <h2 className="text-lg font-bold text-stone-950">
+                        {category.title}
+                      </h2>
+                    </div>
+
+                    <p className="text-xs text-stone-600 leading-relaxed">
+                      {category.description}
+                    </p>
+
+                    {/* Skill Items List */}
+                    <div className="space-y-3 pt-2">
+                      {category.skills.map((skill) => (
+                        <div
+                          key={skill.name}
+                          className="p-3.5 rounded-2xl bg-stone-50 border border-stone-200 transition-all"
+                        >
+                          <div className="flex items-center justify-between gap-2 mb-1">
+                            <span className="text-sm font-semibold text-stone-900">
+                              {skill.name}
+                            </span>
+                            <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-stone-200/80 text-stone-800 font-mono">
+                              {skill.level}
+                            </span>
+                          </div>
+                          <p className="text-xs text-stone-600 leading-snug">
+                            {skill.desc}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+
+          {/* Engineering Philosophy Section */}
+          <div className="pt-10 border-t border-stone-200">
+            <div className="text-center max-w-2xl mx-auto space-y-3 mb-12">
+              <span className="text-xs uppercase tracking-widest text-stone-500 font-semibold font-mono">
+                Philosophy
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-950">
+                How I Approach Frontend Engineering
+              </h2>
+              <p className="text-sm text-stone-600">
+                Building reliable software requires more than syntax knowledge. Here is what guides my development process.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {engineeringPrinciples.map((principle) => {
+                const Icon = principle.icon
+                return (
+                  <div
+                    key={principle.title}
+                    className="p-6 sm:p-8 rounded-2xl bg-white border border-stone-200 flex items-start gap-4 card-shadow hover:shadow-lg transition-all duration-300"
+                  >
+                    <div className="w-10 h-10 rounded-xl bg-stone-100 border border-stone-200 flex items-center justify-center text-stone-900 flex-shrink-0 mt-1">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="text-base sm:text-lg font-bold text-stone-950">
+                        {principle.title}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                        {principle.description}
+                      </p>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+
+        </div>
+      </Container>
     </div>
-  ))}
-</div>
-
-    </motion.div>
-
-    </div>
-
-    </div>
-
-    </Container>
-
-    </>
   )
 }
 

@@ -1,94 +1,96 @@
-import { Brain,
-    Hammer,
-    Rocket,
- } from "lucide-react"
-import { useState } from "react"
-import { motion } from "framer-motion"
+import { CheckCircle2, Cpu, Layout, Sparkles, Zap } from "lucide-react"
 import Container from "./common/Container"
 
-const Processess = [
-    {
-        index: 0,
-        number: "01",
-        title: "Understand",
-        icon: Brain,
-        color: "#F7C948",
-        description: "Figure out what you actually need, break it down into clear steps, and make sure we're solving the right problem.",
-    },
-    {
-        index: 1,
-        number: "02",
-        title: "Build",
-        icon: Hammer,
-        color: "#7AA2F7",
-        description: "Write clean code that works on every device, loads fast, and doesn't break when users actually use it.",
-    },
-    {
-        index: 2,
-        number: "03",
-        title: "Ship",
-        icon: Rocket,
-        color: "#9D7AF7",
-        description: "Test everything, fix what's broken, polish the details, and deliver something you're proud to show off.",
-    }
+const standards = [
+  {
+    icon: Layout,
+    title: "Component-Driven Architecture",
+    description:
+      "I break complex UIs down into clean, isolated components with clear prop contracts. This keeps codebases modular, easy to refactor, and scalable as apps grow.",
+    bullets: ["Atomic reusability", "Predictable state flow", "Clean folder structure"],
+  },
+  {
+    icon: Zap,
+    title: "Performance & Fast Interactions",
+    description:
+      "A sluggish UI loses users. I optimize asset delivery, minimize unnecessary re-renders, and ensure instantaneous feedback for every user interaction.",
+    bullets: ["Fast load times", "Optimized WebP assets", "Minimal layout shifts"],
+  },
+  {
+    icon: Cpu,
+    title: "100% Cross-Device Fidelity",
+    description:
+      "Every layout is rigorously tested across mobile, tablet, and widescreen viewports with fluid typography and touch-friendly interaction targets.",
+    bullets: ["Mobile-first approach", "Fluid responsive grids", "Touch-friendly targets"],
+  },
+  {
+    icon: Sparkles,
+    title: "Thoughtful Polish & Micro-Motion",
+    description:
+      "Visual excellence is what elevates software from basic to world-class. I implement smooth micro-interactions that guide users and create a memorable feel.",
+    bullets: ["Smooth transitions", "Zero layout jank", "Accessible contrast"],
+  },
 ]
 
 const Process = () => {
-
-    const [active, setActive] = useState(0);
-
   return (
-    <>
-    <Container>
-
-        <motion.div
-        initial={{ opacity: 0, y: 32 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.5, delay: 0.3 }} 
-        className="flex flex-col gap-10 justify-center items-center min-h-dvh pt-20 md:pt-0">
-
-            <h1 className="text-[#E6E8EB] text-xl md:text-2xl lg:text-3xl">
-                Believe in the process
-            </h1>
-
-        <div className="flex flex-col md:flex-row gap-6">
-        {Processess.map(( { title, number, description, icon: Icon, color }) => (
-        <motion.div 
-        whileHover={{ scale: 1.05}}
-        className="flex flex-col items-start gap-4 p-8 bg-[#0a0a0a] hover:bg-[#7f1d1d] border border-[#2a2a2a] hover:border-[#ef4444] backdrop-blur-md rounded-2xl">
-
-        <div className="flex flex-col items-center gap-4">
-
-        <h3 className="bg-clip-text text-transparent bg-gradient-to-b from-red-900 to-transparent text-6xl font-semibold">
-            {number}
-        </h3>
-
-        <div className="flex flex-row items-center gap-3">
-        <div className="h-[45px] md:h-[55px] w-[45px] md:w-[55px] bg-[#2a1515] border border-[#4a1f1f] rounded-2xl flex items-center justify-center">
-            <div className="max-w-[30px]">
-                    <Icon className="w-full h-full object-contain text-[#ef4444]"  />
-            </div>
-        </div>
-            <h2 className="text-[#ffffff] text-md lg:text-xl font-semibold">
-                {title}
+    <section className="py-20 border-t border-stone-200/80">
+      <Container>
+        <div className="space-y-12">
+          
+          <div className="text-center max-w-2xl mx-auto space-y-3">
+            <span className="text-xs uppercase tracking-widest text-stone-600 font-semibold font-mono">
+              Standards & Philosophy
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-950 tracking-tight">
+              How I Approach Frontend Engineering
             </h2>
-        </div>
+            <p className="text-sm text-stone-600">
+              The technical standards and design principles that guide every web application I build.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {standards.map((std) => {
+              const Icon = std.icon
+              return (
+                <div
+                  key={std.title}
+                  className="p-6 sm:p-8 rounded-2xl bg-white border border-stone-200/90 hover:border-stone-400 transition-all duration-200 space-y-4 card-shadow hover:shadow-lg"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-stone-100 border border-stone-200 flex items-center justify-center text-stone-900">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <h3 className="text-lg font-bold text-stone-900">
+                      {std.title}
+                    </h3>
+                  </div>
+
+                  <p className="text-sm text-stone-600 leading-relaxed">
+                    {std.description}
+                  </p>
+
+                  <div className="pt-2 flex flex-wrap gap-2">
+                    {std.bullets.map((b) => (
+                      <span
+                        key={b}
+                        className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium bg-stone-50 text-stone-700 border border-stone-200"
+                      >
+                        <CheckCircle2 className="w-3.5 h-3.5 text-stone-900" />
+                        <span>{b}</span>
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )
+            })}
+          </div>
 
         </div>
-
-        <p className="text-[#616161] text-sm pt-[6px] max-w-xs text-left"> 
-            {description}
-        </p>
-        </motion.div>
-        ))}
-        </div>
-
-        </motion.div>
-
-        </Container>  
-    </>
+      </Container>
+    </section>
   )
 }
 
-export default Process;
+export default Process
