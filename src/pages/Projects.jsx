@@ -6,12 +6,31 @@ import BrowserWindow from "../components/common/BrowserWindow"
 // High-Resolution Pure Website Screenshots
 import LuluScreenshot from "../assets/images/devices/lulu-screenshot.png"
 import QwestScreenshot from "../assets/images/devices/qwest-desktop.png"
-import ProfinaScreenshot from "../assets/images/devices/profina-screenshot.png"
 import TocosScreenshot from "../assets/images/devices/tocos-screenshot.webp"
 
 const projectsData = [
   {
     id: 1,
+    category: "webapp",
+    tag: "E-Commerce Platform",
+    title: "Tocos Arachnids",
+    role: "Full-Stack Developer (React & Supabase)",
+    subtitle: "Exotic Pet E-Commerce Platform with Supabase Backend",
+    description:
+      "A full-stack e-commerce platform built for arachnid and exotic pet enthusiasts. Features dynamic product catalogs, species information, user authentication, live shopping cart management, and seamless data persistence powered by a Supabase backend.",
+    highlights: [
+      "Full-stack e-commerce architecture powered by Supabase backend and PostgreSQL",
+      "Dynamic product catalog with category filtering, species care details, and live inventory tracking",
+      "Secure user authentication and persistent shopping cart workflow",
+      "Responsive, modern UI designed with fluid interactions using React and Tailwind CSS",
+    ],
+    stack: ["React.js", "Tailwind CSS", "Supabase", "PostgreSQL", "E-Commerce", "Vercel"],
+    image: TocosScreenshot,
+    live: "https://tocos-arachnid.vercel.app/",
+    github: "https://github.com/mohammedrayyan-dev/Tocos-Arachnid.git",
+  },
+  {
+    id: 2,
     category: "client",
     tag: "Commercial Client Delivery",
     title: "Lulu Furniture",
@@ -31,7 +50,7 @@ const projectsData = [
     github: "https://github.com/mohammedrayyan-dev/Lulu-Furniture.git",
   },
   {
-    id: 2,
+    id: 3,
     category: "webapp",
     tag: "Productivity Web App",
     title: "Qwest Task Manager",
@@ -49,45 +68,6 @@ const projectsData = [
     image: QwestScreenshot,
     live: "https://qwest-seven.vercel.app/",
     github: "https://github.com/mohammedrayyan-dev/Qwest.git",
-  },
-  {
-    id: 3,
-    category: "webapp",
-    tag: "Identity & Profile System",
-    title: "Profina",
-    role: "Frontend Engineer",
-    subtitle: "Digital Profile & Identity Hub",
-    description:
-      "A centralized digital profile management platform allowing users to curate, view, and maintain their personal and professional profiles with structured data management and modern UI styling.",
-    highlights: [
-      "Centralized identity dashboard for editing contact and professional links",
-      "Interactive responsive layout optimized for all viewport sizes",
-      "Accessible typography and high-contrast dark theme styling",
-      "Deployed on Vercel with automated CI/CD pipeline",
-    ],
-    stack: ["React.js", "Tailwind CSS", "Vercel", "Component UI"],
-    image: ProfinaScreenshot,
-    live: "https://profina.vercel.app/",
-    github: "https://github.com/mohammedrayyan-dev/Profina.git",
-  },
-  {
-    id: 4,
-    category: "webapp",
-    tag: "Design System Showcase",
-    title: "Tocos UI",
-    role: "Frontend Designer & Developer",
-    subtitle: "Interactive Modern Web Interface",
-    description:
-      "A clean, responsive frontend application focused on sleek UI layouts, fluid component states, and modern web aesthetics.",
-    highlights: [
-      "Modern layout engineering with Tailwind CSS",
-      "Component-driven structure with reusability in mind",
-      "Fluid transitions and interactive elements",
-    ],
-    stack: ["React.js", "Tailwind CSS", "Modern Web", "Vite"],
-    image: TocosScreenshot,
-    live: "https://github.com/mohammedrayyan-dev",
-    github: "https://github.com/mohammedrayyan-dev",
   },
 ]
 

@@ -6,9 +6,22 @@ import BrowserWindow from "./common/BrowserWindow"
 // High-Resolution Pure Website Screenshots
 import LuluScreenshot from "../assets/images/devices/lulu-screenshot.png"
 import QwestScreenshot from "../assets/images/devices/qwest-desktop.png"
-import ProfinaScreenshot from "../assets/images/devices/profina-screenshot.png"
+import TocosScreenshot from "../assets/images/devices/tocos-screenshot.webp"
 
 const projects = [
+  {
+    id: "tocos-arachnids",
+    tag: "E-Commerce Platform",
+    title: "Tocos Arachnids",
+    subtitle: "E-Commerce Platform with Supabase Backend",
+    description:
+      "A full-stack e-commerce platform built for an exotic pet and arachnid specialty store. Features dynamic product catalogs, species information, user authentication, and persistent shopping cart and checkout backed by a Supabase database.",
+    impact: "Full-stack e-commerce platform with Supabase backend, real-time database, auth, and responsive UI.",
+    tech: ["React.js", "Tailwind CSS", "Supabase", "PostgreSQL", "E-Commerce"],
+    image: TocosScreenshot,
+    live: "https://tocos-arachnid.vercel.app/",
+    github: "https://github.com/mohammedrayyan-dev/Tocos-Arachnid.git",
+  },
   {
     id: "lulu-furniture",
     tag: "Commercial Client Delivery",
@@ -34,19 +47,6 @@ const projects = [
     image: QwestScreenshot,
     live: "https://qwest-seven.vercel.app/",
     github: "https://github.com/mohammedrayyan-dev/Qwest.git",
-  },
-  {
-    id: "profina",
-    tag: "Profile Management",
-    title: "Profina Identity Hub",
-    subtitle: "Digital Profile & Identity Platform",
-    description:
-      "A centralized digital profile platform empowering users to manage, customize, and showcase their personal and professional links through an intuitive responsive interface.",
-    impact: "Clean component hierarchy with responsive cross-device layout.",
-    tech: ["React.js", "Tailwind CSS", "Component Systems", "Vercel"],
-    image: ProfinaScreenshot,
-    live: "https://profina.vercel.app/",
-    github: "https://github.com/mohammedrayyan-dev/Profina.git",
   },
 ]
 
